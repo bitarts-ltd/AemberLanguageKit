@@ -540,3 +540,57 @@ public enum PackageCheckRunner: Sendable {
         return results.compactMap { $0 }
     }
 }
+
+// MARK: - Shared Check Helpers
+
+extension PackageCheckRunner {
+
+    /// @brief Updates of packages from their versions.
+    /// @param packages The packages to check, each with a version
+    /// @param graph The graph, for direct dependencies' rules
+    /// @param versions A package's versions and newest tagged release;
+    /// nil to skip it; throws when it couldn't be listed
+    /// @return The updates, and the names of packages that failed
+    public static func updates(
+        of packages: [ResolvedPackage],
+        in graph: PackageGraph,
+        versions: @escaping (ResolvedPackage) async throws -> (versions: [String], latest: String?)?
+    ) async -> (updates: [PackageUpdate], failed: [String]) {
+        let results = await map(packages) { package -> (PackageUpdate?, String?) in
+            guard let current = package.version else { return (nil, nil) }
+            do {
+                guard let found = try await versions(package) else { return (nil, nil) }
+                let rule = graph.dependencies.first { $0.resolvedID == package.id }?.rule
+                let allows: ((String) -> Bool)? = rule.flatMap { rule in
+                    rule.allows(current) == nil ? nil : { rule.allows($0) == true }
+                }
+                return (PackageUpdate.from(packageID: package.id, current: current, versions: found.versions, latest: found.latest, allows: allows), nil)
+            } catch {
+                return (nil, package.name)
+            }
+        }
+        return (results.compactMap(\.0), results.compactMap(\.1))
+    }
+
+    /// @brief The problem line for packages whose versions couldn't be
+    /// listed.
+    /// @param names Their names
+    /// @param format The line, localized, with %@ for the names
+    /// ("Couldn’t list the versions of %@.")
+    /// @return The line, or nil for none
+    public static func failedProblem(_ names: [String], format: String) -> String? {
+        guard !names.isEmpty else { return nil }
+        return String(format: format, ListFormatter.localizedString(byJoining: names.sorted()))
+    }
+
+    /// @brief The problem line for a tool that failed: the first line it
+    /// printed, in its own words, else its error's description, as
+    /// Aember words it.
+    /// @param command The command line
+    /// @param message What it printed
+    /// @return The line
+    public static func toolProblem(_ command: String, _ message: String) -> String {
+        let line = message.split(whereSeparator: \.isNewline).first { !$0.trimmingCharacters(in: .whitespaces).isEmpty }
+        return line.map(String.init) ?? PackageError.toolFailed(command: command, message: message).localizedDescription
+    }
+}

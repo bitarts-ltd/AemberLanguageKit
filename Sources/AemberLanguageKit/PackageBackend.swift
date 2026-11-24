@@ -113,6 +113,14 @@ public protocol PackageBackend: AnyObject {
     /// change to one on disk reads the graph again ("Cargo.toml",
     /// "Cargo.lock")
     static var packageFileNames: [String] { get }
+
+    /// The kinds of dependency the Add Package sheet offers; only
+    /// .normal hides its popup
+    static var dependencyKinds: [DependencyKind] { get }
+
+    /// Whether a requirement written as a bare version (1.2.3) means
+    /// exactly it, as npm's does, rather than ^, as Cargo's does
+    static var bareVersionIsExact: Bool { get }
 }
 
 extension PackageBackend {
@@ -126,6 +134,16 @@ extension PackageBackend {
     /// No files watched by default
     public static var packageFileNames: [String] {
         []
+    }
+
+    /// Only normal dependencies by default
+    public static var dependencyKinds: [DependencyKind] {
+        [.normal]
+    }
+
+    /// A bare version is ^ by default
+    public static var bareVersionIsExact: Bool {
+        false
     }
 
     /// The folder the manifest is in
@@ -229,6 +247,14 @@ public enum PackageError: Error, Equatable, Sendable {
     /// Aember would edit the manifest for a change, but the dependency
     /// isn't written there in a form it can edit: its name
     case notWrittenLiterally(String)
+
+    /// A name, version or requirement that would read as an option (it
+    /// is empty, starts with "-" or spans lines): the value
+    case invalidArgument(String)
+
+    /// The package manager can't make the change: the change, and the
+    /// package manager's name (Swift, Cargo, npm)
+    case cannotMake(PackageChange, tool: String)
 }
 
 // MARK: - Commands
@@ -258,6 +284,31 @@ public struct PackageCommand: Equatable, Sendable {
     }
 
 
+}
+
+extension PackageCommand {
+
+    /// @brief Checks a name, version or requirement before it goes on a
+    /// command line.
+    /// @param value The value
+    /// @return The value
+    /// @throws PackageError.invalidArgument if it is empty, starts with
+    /// "-" or spans lines
+    @discardableResult
+    public static func checked(_ value: String) throws -> String {
+        guard !value.isEmpty, !value.hasPrefix("-"), !value.contains(where: \.isNewline) else {
+            throw PackageError.invalidArgument(value)
+        }
+        return value
+    }
+
+    /// @brief The error for a change a backend can't make.
+    /// @param change The change
+    /// @param tool The package manager's name
+    /// @return The error
+    public static func unsupported(_ change: PackageChange, by tool: String) -> PackageError {
+        .cannotMake(change, tool: tool)
+    }
 }
 
 extension VersionRule {

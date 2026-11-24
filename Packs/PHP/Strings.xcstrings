@@ -1,0 +1,129 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Install intelephense for PHP support:\n\n  npm install -g intelephense" : {
+      "comment" : "intelephense install guidance",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie intelephense für die PHP-Unterstützung:\n\n  npm install -g intelephense"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instala intelephense para tener soporte de PHP:\n\n  npm install -g intelephense"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez intelephense pour la prise en charge de PHP :\n\n  npm install -g intelephense"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa intelephense per il supporto di PHP:\n\n  npm install -g intelephense"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP をサポートするには、intelephense をインストールしてください:\n\n  npm install -g intelephense"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для поддержки PHP установите intelephense:\n\n  npm install -g intelephense"
+          }
+        }
+      }
+    },
+    "PHP files, intelephense and Composer projects" : {
+      "comment" : "Language pack summary in the Languages settings: what the PHP pack covers",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP-Dateien, intelephense und Composer-Projekte"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivos PHP, intelephense y proyectos de Composer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichiers PHP, intelephense et projets Composer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File PHP, intelephense e progetti Composer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP ファイル、intelephense、Composer プロジェクト"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Файлы PHP, intelephense и проекты Composer"
+          }
+        }
+      }
+    },
+    "PHP/Composer" : {
+      "comment" : "PHP Composer project type name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP/Composer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP/Composer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP/Composer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP/Composer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP/Composer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PHP/Composer"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

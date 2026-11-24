@@ -1,0 +1,7 @@
+tree-sitter-javascript
+https://github.com/tree-sitter/tree-sitter-javascript
+commit 58404d8cf191d69f2674a8fd507bd5776f46cb11 (2025-09-14)
+See LICENSE
+
+javascript/src copied as they are by Scripts/vendor-grammar.py.
+Run it again with a newer checkout to update them.

@@ -1,0 +1,33 @@
+{
+ "crates": [
+  {
+   "description": "A generic serialization/deserialization framework",
+   "downloads": 1760245320,
+   "max_stable_version": "1.0.229",
+   "max_version": "1.0.229",
+   "name": "serde",
+   "newest_version": "1.0.229"
+  },
+  {
+   "description": "YAML (de)serializer for Serde, emphasizing panic-free parsing, fast builds and good error reporting. Supports properties, include, tag and comment capture",
+   "downloads": 21999368,
+   "max_stable_version": "2.2.0",
+   "max_version": "3.0.0-rc.1",
+   "name": "serde-saphyr",
+   "newest_version": "3.0.0-rc.1"
+  },
+  {
+   "description": "Official Rust client for ClickHouse DB",
+   "downloads": 18029392,
+   "max_stable_version": "0.15.3",
+   "max_version": "0.15.3",
+   "name": "clickhouse",
+   "newest_version": "0.15.3"
+  }
+ ],
+ "meta": {
+  "next_page": "?per_page=3&q=serde&seek=W2ZhbHNlLDkuMiw2Mzg1MjcyLDE0OTkxXQ",
+  "prev_page": null,
+  "total": 26155
+ }
+}

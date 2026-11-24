@@ -1,0 +1,6 @@
+    Updating crates.io index
+     Locking 1 package to latest compatible version
+   Unchanged anyhow v1.0.80 (available: v1.0.104)
+    Updating rand v0.7.0 -> v0.7.3 (available: v0.10.4)
+note: to see how you depend on a package, run `cargo tree --invert <dep>@<ver>`
+warning: not updating lockfile due to dry run

@@ -1,0 +1,84 @@
+{
+    "packages": [
+        {
+            "name": "appy",
+            "version": "0.1.0",
+            "id": "path+file:///work/appy#0.1.0",
+            "license": null,
+            "license_file": null,
+            "description": null,
+            "source": null,
+            "dependencies": [
+                {
+                    "name": "midy",
+                    "source": null,
+                    "req": "^0.1.0",
+                    "kind": null,
+                    "rename": null,
+                    "optional": false,
+                    "uses_default_features": true,
+                    "features": [],
+                    "target": null,
+                    "registry": null,
+                    "path": "/work/midy"
+                },
+                {
+                    "name": "leafy",
+                    "source": null,
+                    "req": "*",
+                    "kind": "dev",
+                    "rename": null,
+                    "optional": false,
+                    "uses_default_features": true,
+                    "features": [],
+                    "target": null,
+                    "registry": null,
+                    "path": "/work/leafy"
+                }
+            ],
+            "targets": [
+                {
+                    "kind": [
+                        "lib"
+                    ],
+                    "crate_types": [
+                        "lib"
+                    ],
+                    "name": "appy",
+                    "src_path": "/work/appy/src/lib.rs",
+                    "edition": "2024",
+                    "doc": true,
+                    "doctest": true,
+                    "test": true
+                }
+            ],
+            "features": {},
+            "manifest_path": "/work/appy/Cargo.toml",
+            "metadata": null,
+            "publish": null,
+            "authors": [],
+            "categories": [],
+            "keywords": [],
+            "readme": null,
+            "repository": null,
+            "homepage": null,
+            "documentation": null,
+            "edition": "2024",
+            "links": null,
+            "default_run": null,
+            "rust_version": null
+        }
+    ],
+    "workspace_members": [
+        "path+file:///work/appy#0.1.0"
+    ],
+    "workspace_default_members": [
+        "path+file:///work/appy#0.1.0"
+    ],
+    "resolve": null,
+    "target_directory": "/work/appy/target",
+    "build_directory": "/work/appy/target",
+    "version": 1,
+    "workspace_root": "/work/appy",
+    "metadata": null
+}

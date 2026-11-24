@@ -1,0 +1,26 @@
+{
+ "objects": [
+  {
+   "package": {
+    "description": "Left pad a string with zeros or a specified string. Fastest implementation.",
+    "name": "pad-left",
+    "version": "2.1.0"
+   }
+  },
+  {
+   "package": {
+    "description": "Left pad a string.",
+    "name": "@stdlib/string-left-pad",
+    "version": "0.2.3"
+   }
+  },
+  {
+   "package": {
+    "description": "Left-pad each line in a string",
+    "name": "lpad",
+    "version": "3.0.0"
+   }
+  }
+ ],
+ "total": 62719
+}

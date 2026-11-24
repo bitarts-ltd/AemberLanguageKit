@@ -24,8 +24,9 @@ import Foundation
 /// scanner.c) statically, so its symbols are the pack's own.
 public struct Grammar: Sendable {
 
-    /// Returns the grammar's TSLanguage
-    public let language: @convention(c) () -> OpaquePointer
+    /// Returns the grammar's TSLanguage. A C function declared as
+    /// returning `const TSLanguage *` imports into Swift as this.
+    public let language: @convention(c) () -> OpaquePointer?
 
     /// The tree-sitter ABI version the grammar was generated for, when
     /// the pack knows it; Aember checks it against its tree-sitter's
@@ -35,7 +36,7 @@ public struct Grammar: Sendable {
     /// @param language The grammar's tree_sitter_<name> function
     /// @param abiVersion Its tree-sitter ABI version, if known
     /// @return The grammar
-    public init(_ language: @escaping @convention(c) () -> OpaquePointer, abiVersion: Int? = nil) {
+    public init(_ language: @escaping @convention(c) () -> OpaquePointer?, abiVersion: Int? = nil) {
         self.language = language
         self.abiVersion = abiVersion
     }
@@ -109,6 +110,9 @@ public struct LanguageDefinition: Sendable {
     /// What starts and ends a block comment ("/*", "*/")
     public var blockComment: (start: String, end: String)?
 
+    /// What starts a documentation comment ("///", "/**")
+    public var docComment: String?
+
     /// The grammar; nil uses Aember's own for the language, if any
     public var grammar: Grammar?
 
@@ -132,6 +136,7 @@ public struct LanguageDefinition: Sendable {
     /// @param lspLanguageIDsByExtension LSP names for some extensions
     /// @param lineComment What starts a line comment
     /// @param blockComment What starts and ends a block comment
+    /// @param docComment What starts a documentation comment
     /// @param grammar Its tree-sitter grammar
     /// @param queries The grammar's queries
     /// @param inheritsQueriesFrom A language whose queries come first
@@ -147,6 +152,7 @@ public struct LanguageDefinition: Sendable {
         lspLanguageIDsByExtension: [String: String] = [:],
         lineComment: String? = nil,
         blockComment: (start: String, end: String)? = nil,
+        docComment: String? = nil,
         grammar: Grammar? = nil,
         queries: LanguageQueries = LanguageQueries(),
         inheritsQueriesFrom: String? = nil
@@ -161,6 +167,7 @@ public struct LanguageDefinition: Sendable {
         self.lspLanguageIDsByExtension = lspLanguageIDsByExtension
         self.lineComment = lineComment
         self.blockComment = blockComment
+        self.docComment = docComment
         self.grammar = grammar
         self.queries = queries
         self.inheritsQueriesFrom = inheritsQueriesFrom

@@ -1,0 +1,170 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Install pylsp for Python support:\n\n  brew install python-lsp-server\n\nOr via pip:\n\n  pip install python-lsp-server" : {
+      "comment" : "pylsp install guidance",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie pylsp für die Python-Unterstützung:\n\n  brew install python-lsp-server\n\nOder über pip:\n\n  pip install python-lsp-server"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instala pylsp para tener soporte de Python:\n\n  brew install python-lsp-server\n\nO con pip:\n\n  pip install python-lsp-server"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez pylsp pour la prise en charge de Python :\n\n  brew install python-lsp-server\n\nOu via pip :\n\n  pip install python-lsp-server"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa pylsp per il supporto di Python:\n\n  brew install python-lsp-server\n\nOppure tramite pip:\n\n  pip install python-lsp-server"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python をサポートするには、pylsp をインストールしてください:\n\n  brew install python-lsp-server\n\nまたは pip を使用:\n\n  pip install python-lsp-server"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для поддержки Python установите pylsp:\n\n  brew install python-lsp-server\n\nИли через pip:\n\n  pip install python-lsp-server"
+          }
+        }
+      }
+    },
+    "Python" : {
+      "comment" : "Python project type name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python"
+          }
+        }
+      }
+    },
+    "Python files, pylsp and pytest" : {
+      "comment" : "Language pack summary in the Languages settings: what the Python pack covers",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python-Dateien, pylsp und pytest"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivos Python, pylsp y pytest"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichiers Python, pylsp et pytest"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File Python, pylsp e pytest"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python ファイル、pylsp、pytest"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Файлы Python, pylsp и pytest"
+          }
+        }
+      }
+    },
+    "Python projects have no build step; run the tests instead, or add \"build\" to .aember/build.json." : {
+      "comment" : "Error building a Python project; the JSON key stays as it is",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python-Projekte haben keinen Build-Schritt; führen Sie stattdessen die Tests aus oder fügen Sie \"build\" zu .aember/build.json hinzu."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los proyectos de Python no tienen paso de compilación; ejecuta las pruebas en su lugar o añade \"build\" a .aember/build.json."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les projets Python n’ont pas d’étape de build ; lancez plutôt les tests, ou ajoutez \"build\" à .aember/build.json."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I progetti Python non hanno una fase di build; esegui invece i test, oppure aggiungi \"build\" a .aember/build.json."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python プロジェクトにはビルドの手順がありません。代わりにテストを実行するか、.aember/build.json に \"build\" を追加してください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У проектов Python нет шага сборки; запустите тесты или добавьте \"build\" в .aember/build.json."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

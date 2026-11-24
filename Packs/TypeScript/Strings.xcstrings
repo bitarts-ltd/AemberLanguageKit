@@ -1,0 +1,334 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Couldn’t list the versions of %@." : {
+      "comment" : "Check for Updates problem, in the status bar and the Packages folder's tooltip: the packages, as a list",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Versionen von %@ konnten nicht abgerufen werden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron obtener las versiones de %@."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d’obtenir les versions de %@."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile ottenere le versioni di %@."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ のバージョンを取得できませんでした。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось получить версии %@."
+          }
+        }
+      }
+    },
+    "Install Node.js, from nodejs.org or Homebrew." : {
+      "comment" : "Packages folder tooltip when npm isn't installed",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie Node.js von nodejs.org oder mit Homebrew."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instale Node.js desde nodejs.org o con Homebrew."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez Node.js depuis nodejs.org ou avec Homebrew."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa Node.js da nodejs.org o con Homebrew."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nodejs.org または Homebrew から Node.js をインストールしてください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установите Node.js с nodejs.org или через Homebrew."
+          }
+        }
+      }
+    },
+    "Install TypeScript 7 or later for TypeScript/JavaScript support; its tsc includes a language server:\n\n  brew install typescript\n\nOr via npm:\n\n  npm install -g typescript" : {
+      "comment" : "TypeScript native language server install guidance",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie TypeScript 7 oder neuer für die Unterstützung von TypeScript/JavaScript; sein tsc enthält einen Sprachserver:\n\n  brew install typescript\n\nOder über npm:\n\n  npm install -g typescript"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instala TypeScript 7 o posterior para tener soporte de TypeScript/JavaScript; su tsc incluye un servidor de lenguaje:\n\n  brew install typescript\n\nO con npm:\n\n  npm install -g typescript"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez TypeScript 7 ou ultérieur pour la prise en charge de TypeScript/JavaScript ; son tsc inclut un serveur de langage :\n\n  brew install typescript\n\nOu via npm :\n\n  npm install -g typescript"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa TypeScript 7 o successivo per il supporto di TypeScript/JavaScript; il suo tsc include un server di linguaggio:\n\n  brew install typescript\n\nOppure tramite npm:\n\n  npm install -g typescript"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript/JavaScript をサポートするには、TypeScript 7 以降をインストールしてください。その tsc には言語サーバが含まれています:\n\n  brew install typescript\n\nまたは npm を使用:\n\n  npm install -g typescript"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для поддержки TypeScript/JavaScript установите TypeScript 7 или новее; его tsc включает языковой сервер:\n\n  brew install typescript\n\nИли через npm:\n\n  npm install -g typescript"
+          }
+        }
+      }
+    },
+    "Install Yarn, with “corepack enable yarn” or from yarnpkg.com." : {
+      "comment" : "Packages folder tooltip when Yarn isn't installed; keep the command as it is",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie Yarn mit „corepack enable yarn“ oder von yarnpkg.com."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instale Yarn con «corepack enable yarn» o desde yarnpkg.com."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez Yarn avec « corepack enable yarn » ou depuis yarnpkg.com."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa Yarn con «corepack enable yarn» o da yarnpkg.com."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yarn を「corepack enable yarn」で、または yarnpkg.com からインストールしてください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установите Yarn командой «corepack enable yarn» или с сайта yarnpkg.com."
+          }
+        }
+      }
+    },
+    "Install pnpm, with “corepack enable pnpm” or from pnpm.io." : {
+      "comment" : "Packages folder tooltip when pnpm isn't installed; keep the command as it is",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie pnpm mit „corepack enable pnpm“ oder von pnpm.io."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instale pnpm con «corepack enable pnpm» o desde pnpm.io."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez pnpm avec « corepack enable pnpm » ou depuis pnpm.io."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa pnpm con «corepack enable pnpm» o da pnpm.io."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pnpm を「corepack enable pnpm」で、または pnpm.io からインストールしてください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установите pnpm командой «corepack enable pnpm» или с сайта pnpm.io."
+          }
+        }
+      }
+    },
+    "Install typescript-language-server with TypeScript 5 or 6, which provide the tsserver it needs:\n\n  npm install -g typescript-language-server typescript@6\n\nOr install TypeScript 7 or later, whose tsc includes a language server:\n\n  brew install typescript" : {
+      "comment" : "typescript-language-server install guidance",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie typescript-language-server mit TypeScript 5 oder 6, die den benötigten tsserver bereitstellen:\n\n  npm install -g typescript-language-server typescript@6\n\nOder installieren Sie TypeScript 7 oder neuer, dessen tsc einen Sprachserver enthält:\n\n  brew install typescript"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instala typescript-language-server con TypeScript 5 o 6, que proporcionan el tsserver que necesita:\n\n  npm install -g typescript-language-server typescript@6\n\nO instala TypeScript 7 o posterior, cuyo tsc incluye un servidor de lenguaje:\n\n  brew install typescript"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez typescript-language-server avec TypeScript 5 ou 6, qui fournissent le tsserver dont il a besoin :\n\n  npm install -g typescript-language-server typescript@6\n\nOu installez TypeScript 7 ou ultérieur, dont le tsc inclut un serveur de langage :\n\n  brew install typescript"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa typescript-language-server con TypeScript 5 o 6, che forniscono il tsserver necessario:\n\n  npm install -g typescript-language-server typescript@6\n\nOppure installa TypeScript 7 o successivo, il cui tsc include un server di linguaggio:\n\n  brew install typescript"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "typescript-language-server を、必要な tsserver を提供する TypeScript 5 または 6 と一緒にインストールしてください:\n\n  npm install -g typescript-language-server typescript@6\n\nまたは、tsc に言語サーバが含まれる TypeScript 7 以降をインストールしてください:\n\n  brew install typescript"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установите typescript-language-server с TypeScript 5 или 6, которые предоставляют нужный ему tsserver:\n\n  npm install -g typescript-language-server typescript@6\n\nИли установите TypeScript 7 или новее, tsc которого включает языковой сервер:\n\n  brew install typescript"
+          }
+        }
+      }
+    },
+    "TypeScript" : {
+      "comment" : "TypeScript project type name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript"
+          }
+        }
+      }
+    },
+    "TypeScript and JavaScript files, their language servers, and npm, pnpm and Yarn" : {
+      "comment" : "Language pack summary in the Languages settings: what the TypeScript pack covers",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript- und JavaScript-Dateien, ihre Sprachserver sowie npm, pnpm und Yarn"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivos TypeScript y JavaScript, sus servidores de lenguaje, y npm, pnpm y Yarn"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichiers TypeScript et JavaScript, leurs serveurs de langage, et npm, pnpm et Yarn"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File TypeScript e JavaScript, i loro server di linguaggio, e npm, pnpm e Yarn"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TypeScript と JavaScript のファイル、その言語サーバ、npm・pnpm・Yarn"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Файлы TypeScript и JavaScript, их языковые серверы, а также npm, pnpm и Yarn"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

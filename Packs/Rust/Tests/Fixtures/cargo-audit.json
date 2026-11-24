@@ -1,0 +1,113 @@
+{
+  "database": {
+    "advisory-count": 912,
+    "last-commit": "3f2a1b0c",
+    "last-updated": "2026-11-20T09:12:44Z"
+  },
+  "lockfile": {
+    "dependency-count": 3
+  },
+  "settings": {
+    "target_arch": [],
+    "target_os": [],
+    "severity": null,
+    "ignore": [],
+    "informational_warnings": [
+      "unmaintained",
+      "unsound",
+      "notice"
+    ]
+  },
+  "vulnerabilities": {
+    "found": true,
+    "count": 2,
+    "list": [
+      {
+        "advisory": {
+          "id": "RUSTSEC-2020-0071",
+          "package": "time",
+          "title": "Potential segfault in the time crate",
+          "description": "Unix-like operating systems may segfault due to dereferencing a dangling pointer.",
+          "date": "2020-11-18",
+          "aliases": [
+            "CVE-2020-26235",
+            "GHSA-wcg3-cvx6-7396"
+          ],
+          "related": [],
+          "collection": "crates",
+          "categories": [
+            "code-execution",
+            "memory-corruption"
+          ],
+          "keywords": [
+            "segfault"
+          ],
+          "cvss": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "informational": null,
+          "references": [],
+          "source": null,
+          "url": "https://github.com/time-rs/time/issues/293",
+          "withdrawn": null,
+          "license": "CC0-1.0"
+        },
+        "versions": {
+          "patched": [
+            ">=0.2.23"
+          ],
+          "unaffected": [
+            "=0.2.0",
+            "=0.2.1"
+          ]
+        },
+        "affected": {
+          "arch": [],
+          "os": [],
+          "functions": {}
+        },
+        "package": {
+          "name": "time",
+          "version": "0.1.45",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "1b797acc5b1f2d2a8a1d0ff9a6e2b1c7f1c2c3d4e5f60718293a4b5c6d7e8f90",
+          "dependencies": [],
+          "replace": null
+        }
+      },
+      {
+        "advisory": {
+          "id": "RUSTSEC-2099-0001",
+          "package": "gone",
+          "title": "A crate the graph doesn't have",
+          "description": "",
+          "date": "2099-01-01",
+          "aliases": [],
+          "related": [],
+          "collection": "crates",
+          "categories": [],
+          "keywords": [],
+          "cvss": null,
+          "informational": null,
+          "references": [],
+          "source": null,
+          "url": null,
+          "withdrawn": null,
+          "license": "CC0-1.0"
+        },
+        "versions": {
+          "patched": [],
+          "unaffected": []
+        },
+        "affected": null,
+        "package": {
+          "name": "gone",
+          "version": "1.0.0",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": null,
+          "dependencies": [],
+          "replace": null
+        }
+      }
+    ]
+  },
+  "warnings": {}
+}

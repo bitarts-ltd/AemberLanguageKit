@@ -1,0 +1,7 @@
+tree-sitter-typescript
+https://github.com/tree-sitter/tree-sitter-typescript
+commit 75b3874edb2dc714fb1fd77a32013d0f8699989f (2025-01-30)
+See LICENSE
+
+typescript/src, tsx/src, common copied as they are by Scripts/vendor-grammar.py.
+Run it again with a newer checkout to update them.

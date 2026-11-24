@@ -1,0 +1,15 @@
+{
+  "name": "web-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "clsx": "^2.1.1",
+    "local-kit": "file:../local-kit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@typescript-eslint/typescript-estree": "^8.0.0"
+  }
+}

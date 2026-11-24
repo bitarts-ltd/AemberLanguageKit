@@ -1,0 +1,211 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Advisories weren’t checked: cargo-audit isn’t installed. Install it with “cargo install cargo-audit”." : {
+      "comment" : "Check for Updates problem for a Rust project when the cargo-audit tool is missing",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sicherheitshinweise wurden nicht geprüft: cargo-audit ist nicht installiert. Installieren Sie es mit „cargo install cargo-audit“."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se comprobaron los avisos de seguridad: cargo-audit no está instalado. Instálelo con «cargo install cargo-audit»."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les avis de sécurité n’ont pas été vérifiés : cargo-audit n’est pas installé. Installez-le avec « cargo install cargo-audit »."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gli avvisi di sicurezza non sono stati controllati: cargo-audit non è installato. Installalo con “cargo install cargo-audit”."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "セキュリティ勧告は確認されていません: cargo-audit がインストールされていません。「cargo install cargo-audit」でインストールしてください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уведомления безопасности не проверены: cargo-audit не установлен. Установите его командой «cargo install cargo-audit»."
+          }
+        }
+      }
+    },
+    "Cargo" : {
+      "comment" : "Rust Cargo build system name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargo"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargo"
+          }
+        }
+      }
+    },
+    "Install Rust with rustup, from rustup.rs." : {
+      "comment" : "Packages folder tooltip when cargo isn't installed",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie Rust mit rustup, von rustup.rs."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instale Rust con rustup, desde rustup.rs."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez Rust avec rustup, depuis rustup.rs."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa Rust con rustup, da rustup.rs."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "rustup.rs から rustup で Rust をインストールしてください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установите Rust с помощью rustup, с rustup.rs."
+          }
+        }
+      }
+    },
+    "Install rust-analyzer for Rust support:\n\n  brew install rust-analyzer\n\nOr via rustup:\n\n  rustup component add rust-analyzer" : {
+      "comment" : "rust-analyzer install guidance",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie rust-analyzer für die Rust-Unterstützung:\n\n  brew install rust-analyzer\n\nOder über rustup:\n\n  rustup component add rust-analyzer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instala rust-analyzer para tener soporte de Rust:\n\n  brew install rust-analyzer\n\nO con rustup:\n\n  rustup component add rust-analyzer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez rust-analyzer pour la prise en charge de Rust :\n\n  brew install rust-analyzer\n\nOu via rustup :\n\n  rustup component add rust-analyzer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa rust-analyzer per il supporto di Rust:\n\n  brew install rust-analyzer\n\nOppure tramite rustup:\n\n  rustup component add rust-analyzer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust をサポートするには、rust-analyzer をインストールしてください:\n\n  brew install rust-analyzer\n\nまたは rustup を使用:\n\n  rustup component add rust-analyzer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для поддержки Rust установите rust-analyzer:\n\n  brew install rust-analyzer\n\nИли через rustup:\n\n  rustup component add rust-analyzer"
+          }
+        }
+      }
+    },
+    "Rust files, rust-analyzer, Cargo builds and crates" : {
+      "comment" : "Language pack summary in the Languages settings: what the Rust pack covers",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust-Dateien, rust-analyzer, Cargo-Builds und Crates"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivos Rust, rust-analyzer, compilaciones con Cargo y crates"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichiers Rust, rust-analyzer, compilations Cargo et crates"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File Rust, rust-analyzer, build con Cargo e crate"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rust ファイル、rust-analyzer、Cargo のビルドとクレート"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Файлы Rust, rust-analyzer, сборки Cargo и крейты"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "fixture-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "lodash": "4.17.15",
+    "react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "localkit": "file:./localkit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "optionalDependencies": {
+    "is-number": "^7.0.0"
+  }
+}
