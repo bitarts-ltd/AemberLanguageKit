@@ -1,0 +1,482 @@
+{
+ "formatVersion": "1.0",
+ "generatedAt": "2026-11-22T15:49:43Z",
+ "name": "Packages by Vapor",
+ "packages": [
+  {
+   "license": {
+    "name": "MIT",
+    "url": "https://github.com/vapor/apns/blob/main/LICENSE"
+   },
+   "readmeURL": "https://github.com/vapor/apns/blob/main/README.md",
+   "summary": "Helpful extensions and abstractions for using APNSwift",
+   "url": "https://github.com/vapor/apns.git",
+   "versions": [
+    {
+     "createdAt": "2026-10-08T16:18:56Z",
+     "defaultToolsVersion": "6.2.0",
+     "license": {
+      "name": "MIT",
+      "url": "https://github.com/vapor/apns/blob/main/LICENSE"
+     },
+     "manifests": {
+      "6.2.0": {
+       "packageName": "vapor-apns",
+       "products": [
+        {
+         "name": "VaporAPNS",
+         "targets": [
+          "VaporAPNS"
+         ],
+         "type": {
+          "library": [
+           "automatic"
+          ]
+         }
+        }
+       ],
+       "toolsVersion": "6.2.0"
+      }
+     },
+     "summary": "## What's Changed\r\n* Support APNSwift 7.0.1 and modernise the package by @kylebrowning in https://github.com/vapor/apns/pull/62\r\n\r\n\r\n**Full Changelog**: https://github.com/vapor/apns/compare/5.0.0...5.1.0",
+     "verifiedCompatibility": [
+      {
+       "platform": {
+        "name": "android"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "android"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "android"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "ios"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "ios"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "ios"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "linux"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "linux"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "linux"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "macos"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "macos"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "macos"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "tvos"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "tvos"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "tvos"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "visionos"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "visionos"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "visionos"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "watchos"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "watchos"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "watchos"
+       },
+       "swiftVersion": "6.4"
+      }
+     ],
+     "version": "5.1.0"
+    }
+   ]
+  },
+  {
+   "license": {
+    "name": "MIT",
+    "url": "https://github.com/vapor/vapor/blob/main/LICENSE"
+   },
+   "readmeURL": "https://github.com/vapor/vapor/blob/main/README.md",
+   "summary": "\ud83d\udca7 A server-side Swift HTTP web framework.",
+   "url": "https://github.com/vapor/vapor.git",
+   "versions": [
+    {
+     "createdAt": "2026-10-13T11:49:31Z",
+     "defaultToolsVersion": "6.4.0",
+     "license": {
+      "name": "MIT",
+      "url": "https://github.com/vapor/vapor/blob/main/LICENSE"
+     },
+     "manifests": {
+      "6.4.0": {
+       "packageName": "vapor",
+       "products": [
+        {
+         "name": "Vapor",
+         "targets": [
+          "Vapor"
+         ],
+         "type": {
+          "library": [
+           "automatic"
+          ]
+         }
+        },
+        {
+         "name": "VaporTesting",
+         "targets": [
+          "VaporTesting"
+         ],
+         "type": {
+          "library": [
+           "automatic"
+          ]
+         }
+        },
+        {
+         "name": "VaporMacros",
+         "targets": [
+          "VaporMacros"
+         ],
+         "type": {
+          "library": [
+           "automatic"
+          ]
+         }
+        }
+       ],
+       "toolsVersion": "6.4.0"
+      }
+     },
+     "summary": "## What's Changed\r\n* Update README with new sponsor by @penny-for-vapor[bot] in https://github.com/vapor/vapor/pull/3597\r\n* Update README with new sponsor by @penny-for-vapor[bot] in https://github.com/vapor/vapor/pull/3600\r\n* Pin Tracing by @0xTim in https://github.com/vapor/vapor/pull/3603\r\n* Bump github/codeql-action from 4.38.2 to 4.38.3 in the dependencies group across 1 directory by @dependabot[bot] in https://github.com/vapor/vapor/pull/3602\r\n* Middleware Macros by @0xTim in https://github.com/vapor/vapor/pull/3464\r\n\r\n\r\n**Full Changelog**: https://github.com/vapor/vapor/compare/5.0.0-beta.3...5.0.0-beta.4",
+     "verifiedCompatibility": [
+      {
+       "platform": {
+        "name": "android"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "ios"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "linux"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "macos"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "tvos"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "visionos"
+       },
+       "swiftVersion": "6.4"
+      }
+     ],
+     "version": "5.0.0-beta.4"
+    },
+    {
+     "defaultToolsVersion": "6.0.0",
+     "license": {
+      "name": "MIT",
+      "url": "https://github.com/vapor/vapor/blob/main/LICENSE"
+     },
+     "manifests": {
+      "6.0.0": {
+       "packageName": "vapor",
+       "products": [
+        {
+         "name": "Vapor",
+         "targets": [
+          "Vapor"
+         ],
+         "type": {
+          "library": [
+           "automatic"
+          ]
+         }
+        },
+        {
+         "name": "XCTVapor",
+         "targets": [
+          "XCTVapor"
+         ],
+         "type": {
+          "library": [
+           "automatic"
+          ]
+         }
+        },
+        {
+         "name": "VaporTesting",
+         "targets": [
+          "VaporTesting"
+         ],
+         "type": {
+          "library": [
+           "automatic"
+          ]
+         }
+        }
+       ],
+       "toolsVersion": "6.0.0"
+      }
+     },
+     "verifiedCompatibility": [
+      {
+       "platform": {
+        "name": "android"
+       },
+       "swiftVersion": "6.1"
+      },
+      {
+       "platform": {
+        "name": "android"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "android"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "ios"
+       },
+       "swiftVersion": "6.1"
+      },
+      {
+       "platform": {
+        "name": "ios"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "ios"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "ios"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "linux"
+       },
+       "swiftVersion": "6.1"
+      },
+      {
+       "platform": {
+        "name": "linux"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "linux"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "macos"
+       },
+       "swiftVersion": "6.1"
+      },
+      {
+       "platform": {
+        "name": "macos"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "macos"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "macos"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "tvos"
+       },
+       "swiftVersion": "6.1"
+      },
+      {
+       "platform": {
+        "name": "tvos"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "tvos"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "tvos"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "visionos"
+       },
+       "swiftVersion": "6.1"
+      },
+      {
+       "platform": {
+        "name": "visionos"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "visionos"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "visionos"
+       },
+       "swiftVersion": "6.4"
+      },
+      {
+       "platform": {
+        "name": "watchos"
+       },
+       "swiftVersion": "6.1"
+      },
+      {
+       "platform": {
+        "name": "watchos"
+       },
+       "swiftVersion": "6.2"
+      },
+      {
+       "platform": {
+        "name": "watchos"
+       },
+       "swiftVersion": "6.3"
+      },
+      {
+       "platform": {
+        "name": "watchos"
+       },
+       "swiftVersion": "6.4"
+      }
+     ],
+     "version": "4.122.4"
+    }
+   ]
+  }
+ ]
+}

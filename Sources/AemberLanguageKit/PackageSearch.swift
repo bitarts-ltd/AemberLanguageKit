@@ -90,6 +90,26 @@ public protocol PackageSearchSource: AnyObject {
     /// @return Its details
     /// @throws PackageSearchError
     func details(of result: PackageSearchResult) async throws -> PackageSearchDetails
+
+    /// When the list searched was fetched, for a source that searches a
+    /// list it downloads (the Swift Package Index's); nil for others
+    var listDate: Date? { get }
+
+    /// Why an older copy of that list is in use, or nil when it's fresh
+    var listNotice: String? { get }
+}
+
+extension PackageSearchSource {
+
+    /// No list, by default
+    public var listDate: Date? {
+        nil
+    }
+
+    /// No notice, by default
+    public var listNotice: String? {
+        nil
+    }
 }
 
 /// @brief Why a search or version list failed

@@ -1,0 +1,254 @@
+{
+  "cLanguageStandard" : null,
+  "cxxLanguageStandard" : null,
+  "defaultLocalization" : null,
+  "dependencies" : [
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swift-collections",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/apple/swift-collections.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "1.1.0",
+                "upperBound" : "2.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swift-nio",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/apple/swift-nio"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "2.65.0",
+                "upperBound" : "2.66.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swift-argument-parser",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/apple/swift-argument-parser"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "exact" : [
+              "1.5.0"
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swift-algorithms",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/apple/swift-algorithms"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "branch" : [
+              "main"
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swift-atomics",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/apple/swift-atomics"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "revision" : [
+              "abcdef0123456789abcdef0123456789abcdef01"
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swift-numerics",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/apple/swift-numerics"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "1.0.0",
+                "upperBound" : "1.2.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "registry" : [
+        {
+          "identity" : "mona.LinkedList",
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "1.2.0",
+                "upperBound" : "2.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fileSystem" : [
+        {
+          "identity" : "leaf",
+          "path" : "/work/Leaf",
+          "productFilter" : null,
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "name" : "Forms",
+  "packageKind" : {
+    "root" : [
+      "/work/Forms"
+    ]
+  },
+  "pkgConfig" : null,
+  "platforms" : [
+
+  ],
+  "products" : [
+
+  ],
+  "providers" : null,
+  "swiftLanguageVersions" : null,
+  "targets" : [
+    {
+      "dependencies" : [
+        {
+          "product" : [
+            "Collections",
+            "swift-collections",
+            null,
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Leaf",
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "Forms",
+      "packageAccess" : true,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "regular"
+    }
+  ],
+  "toolsVersion" : {
+    "_version" : "6.0.0"
+  },
+  "traits" : [
+
+  ]
+}

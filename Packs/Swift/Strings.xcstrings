@@ -1,0 +1,1031 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ isn’t a dependency of this package." : {
+      "comment" : "Error for a package change naming a package the manifest doesn't depend on: its name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ist keine Abhängigkeit dieses Pakets."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ no es una dependencia de este paquete."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ n’est pas une dépendance de ce paquet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ non è una dipendenza di questo pacchetto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ はこのパッケージの依存関係ではありません。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ не является зависимостью этого пакета."
+          }
+        }
+      }
+    },
+    "Building to extract compilation commands…" : {
+      "comment" : "Build message",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build wird ausgeführt, um Kompilierbefehle zu extrahieren …"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compilando para extraer los comandos de compilación…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build en cours pour extraire les commandes de compilation…"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compilazione per estrarre i comandi di compilazione…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コンパイルコマンドを抽出するためにビルド中…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сборка для извлечения команд компиляции…"
+          }
+        }
+      }
+    },
+    "Choose a version rule for the package." : {
+      "comment" : "Error adding a Swift package by URL or registry identity without a version rule",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählen Sie eine Versionsregel für das Paket."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige una regla de versión para el paquete."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez une règle de version pour le paquet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli una regola di versione per il pacchetto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッケージのバージョンルールを選択してください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите правило версий для пакета."
+          }
+        }
+      }
+    },
+    "Configuring xcode-build-server with scheme: %@" : {
+      "comment" : "xcode-build-server config message",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server wird mit Schema %@ konfiguriert"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurando xcode-build-server con el esquema: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuration de xcode-build-server avec le schéma : %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurazione di xcode-build-server con lo schema: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキーム %@ で xcode-build-server を構成中"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройка xcode-build-server со схемой: %@"
+          }
+        }
+      }
+    },
+    "Couldn’t list the versions of %@." : {
+      "comment" : "Check for Updates problem, in the status bar and the Packages folder's tooltip: the packages, as a list",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Versionen von %@ konnten nicht abgerufen werden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron obtener las versiones de %@."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d’obtenir les versions de %@."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile ottenere le versioni di %@."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ のバージョンを取得できませんでした。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось получить версии %@."
+          }
+        }
+      }
+    },
+    "Couldn’t update the package list: %@" : {
+      "comment" : "Add Package sheet, under the results when the Swift package list couldn't be downloaded and the last copy is searched: why",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Paketliste konnte nicht aktualisiert werden: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo actualizar la lista de paquetes: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de mettre à jour la liste des paquets : %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile aggiornare l’elenco dei pacchetti: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッケージリストを更新できませんでした: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось обновить список пакетов: %@"
+          }
+        }
+      }
+    },
+    "Detected scheme: %@" : {
+      "comment" : "Scheme detected message",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erkanntes Schema: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esquema detectado: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schéma détecté : %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schema rilevato: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキームを検出しました: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обнаружена схема: %@"
+          }
+        }
+      }
+    },
+    "Generated compilation database" : {
+      "comment" : "Compilation database generated message\nCompilation database written message",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kompilierungsdatenbank erzeugt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Base de datos de compilación generada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Base de données de compilation générée"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Database di compilazione generato"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コンパイルデータベースを生成しました"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "База данных компиляции создана"
+          }
+        }
+      }
+    },
+    "Install Xcode, or the Swift toolchain from swift.org." : {
+      "comment" : "Packages folder tooltip when swift isn't installed",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installieren Sie Xcode oder die Swift-Toolchain von swift.org."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instale Xcode, o la cadena de herramientas de Swift desde swift.org."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installez Xcode, ou la chaîne d’outils Swift depuis swift.org."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installa Xcode, o la toolchain di Swift da swift.org."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode、または swift.org の Swift ツールチェーンをインストールしてください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Установите Xcode или набор инструментов Swift с swift.org."
+          }
+        }
+      }
+    },
+    "No .xcodeproj or .xcworkspace found" : {
+      "comment" : "No Xcode project error",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kein .xcodeproj oder .xcworkspace gefunden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se ha encontrado ningún .xcodeproj ni .xcworkspace"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun .xcodeproj ou .xcworkspace trouvé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun .xcodeproj o .xcworkspace trovato"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".xcodeproj または .xcworkspace が見つかりません"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не найден .xcodeproj или .xcworkspace"
+          }
+        }
+      }
+    },
+    "No build scheme available" : {
+      "comment" : "No scheme error",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kein Build-Schema verfügbar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay ningún esquema de compilación disponible"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun schéma de build disponible"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuno schema di build disponibile"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用できるビルドスキームがありません"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет доступной схемы сборки"
+          }
+        }
+      }
+    },
+    "Running xcodebuild to extract compilation commands (this may take a moment if the project needs to be built)…" : {
+      "comment" : "xcodebuild start message",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild wird ausgeführt, um Kompilierbefehle zu extrahieren (dies kann etwas dauern, falls das Projekt gebaut werden muss) …"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ejecutando xcodebuild para extraer los comandos de compilación (puede tardar un poco si hay que compilar el proyecto)…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exécution de xcodebuild pour extraire les commandes de compilation (cela peut prendre un moment si le projet doit être compilé)…"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esecuzione di xcodebuild per estrarre i comandi di compilazione (potrebbe richiedere un po' di tempo se il progetto deve essere compilato)…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild を実行してコンパイルコマンドを抽出中(プロジェクトのビルドが必要な場合は時間がかかることがあります)…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запуск xcodebuild для извлечения команд компиляции (это может занять время, если проект нужно собрать)…"
+          }
+        }
+      }
+    },
+    "Swift Package Manager" : {
+      "comment" : "Swift Package Manager build system name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift Package Manager"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift Package Manager"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift Package Manager"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift Package Manager"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift Package Manager"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift Package Manager"
+          }
+        }
+      }
+    },
+    "Swift files, sourcekit-lsp, Swift packages and Xcode projects" : {
+      "comment" : "Language pack summary in the Languages settings: what the Swift pack covers",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift-Dateien, sourcekit-lsp, Swift-Pakete und Xcode-Projekte"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivos Swift, sourcekit-lsp, paquetes Swift y proyectos de Xcode"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichiers Swift, sourcekit-lsp, paquets Swift et projets Xcode"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File Swift, sourcekit-lsp, pacchetti Swift e progetti Xcode"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift ファイル、sourcekit-lsp、Swift パッケージ、Xcode プロジェクト"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Файлы Swift, sourcekit-lsp, пакеты Swift и проекты Xcode"
+          }
+        }
+      }
+    },
+    "Unknown error" : {
+      "comment" : "Error when a tool failed without saying why",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unbekannter Fehler"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error desconocido"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur inconnue"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Errore sconosciuto"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不明なエラー"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неизвестная ошибка"
+          }
+        }
+      }
+    },
+    "Using scheme: %@" : {
+      "comment" : "Scheme selected message",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwendetes Schema: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usando el esquema: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schéma utilisé : %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schema in uso: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用するスキーム: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Используется схема: %@"
+          }
+        }
+      }
+    },
+    "Xcode" : {
+      "comment" : "Xcode build system name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xcode"
+          }
+        }
+      }
+    },
+    "buildServer.json was not created" : {
+      "comment" : "buildServer.json missing error",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "buildServer.json wurde nicht erstellt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se ha creado buildServer.json"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "buildServer.json n’a pas été créé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "buildServer.json non è stato creato"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "buildServer.json が作成されませんでした"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "buildServer.json не создан"
+          }
+        }
+      }
+    },
+    "sourcekit-lsp is included with Xcode.\n\nInstall Xcode from the App Store, or install Command Line Tools:\n\n  xcode-select --install" : {
+      "comment" : "sourcekit-lsp install guidance",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sourcekit-lsp ist in Xcode enthalten.\n\nInstallieren Sie Xcode aus dem App Store oder installieren Sie die Command Line Tools:\n\n  xcode-select --install"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sourcekit-lsp se incluye con Xcode.\n\nInstala Xcode desde el App Store o instala las Command Line Tools:\n\n  xcode-select --install"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sourcekit-lsp est inclus avec Xcode.\n\nInstallez Xcode depuis l’App Store, ou installez les Command Line Tools :\n\n  xcode-select --install"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sourcekit-lsp è incluso in Xcode.\n\nInstalla Xcode dall'App Store, oppure installa i Command Line Tools:\n\n  xcode-select --install"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sourcekit-lsp は Xcode に含まれています。\n\nApp Store から Xcode をインストールするか、コマンドラインツールをインストールしてください:\n\n  xcode-select --install"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sourcekit-lsp входит в состав Xcode.\n\nУстановите Xcode из App Store или установите Command Line Tools:\n\n  xcode-select --install"
+          }
+        }
+      }
+    },
+    "xcode-build-server config failed: %@" : {
+      "comment" : "xcode-build-server config error",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server-Konfiguration fehlgeschlagen: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error al configurar xcode-build-server: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échec de la configuration de xcode-build-server : %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurazione di xcode-build-server non riuscita: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server の設定に失敗しました: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка настройки xcode-build-server: %@"
+          }
+        }
+      }
+    },
+    "xcode-build-server configured successfully. sourcekit-lsp will use Xcode's build system for indexing." : {
+      "comment" : "xcode-build-server success message",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server erfolgreich konfiguriert. sourcekit-lsp verwendet das Build-System von Xcode für die Indizierung."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server se ha configurado correctamente. sourcekit-lsp usará el sistema de compilación de Xcode para indexar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server configuré. sourcekit-lsp utilisera le système de build d’Xcode pour l’indexation."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server configurato correttamente. sourcekit-lsp userà il sistema di build di Xcode per l'indicizzazione."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server を設定しました。sourcekit-lsp はインデックス作成に Xcode のビルドシステムを使用します。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server успешно настроен. sourcekit-lsp будет использовать систему сборки Xcode для индексирования."
+          }
+        }
+      }
+    },
+    "xcode-build-server failed: %@. Falling back to xcodebuild." : {
+      "comment" : "xcode-build-server fallback message",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server fehlgeschlagen: %@. Es wird auf xcodebuild zurückgegriffen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de xcode-build-server: %@. Se usará xcodebuild en su lugar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échec de xcode-build-server : %@. Retour à xcodebuild."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server non riuscito: %@. Uso di xcodebuild in alternativa."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server が失敗しました: %@。xcodebuild にフォールバックします。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка xcode-build-server: %@. Используется xcodebuild."
+          }
+        }
+      }
+    },
+    "xcode-build-server is not installed. Install via: brew install xcode-build-server" : {
+      "comment" : "xcode-build-server not installed error",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server ist nicht installiert. Installieren mit: brew install xcode-build-server"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server no está instalado. Instálalo con: brew install xcode-build-server"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server n’est pas installé. Installez-le avec : brew install xcode-build-server"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server non è installato. Installalo con: brew install xcode-build-server"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server がインストールされていません。インストールするには: brew install xcode-build-server"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcode-build-server не установлен. Установка: brew install xcode-build-server"
+          }
+        }
+      }
+    },
+    "xcodebuild failed: %@" : {
+      "comment" : "xcodebuild error",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild fehlgeschlagen: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de xcodebuild: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échec de xcodebuild : %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild non riuscito: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild が失敗しました: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка xcodebuild: %@"
+          }
+        }
+      }
+    },
+    "xcodebuild lists no scheme for this project; add \"scheme\" to .aember/build.json." : {
+      "comment" : "Error building an Xcode project without schemes; the JSON key stays as it is",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild listet kein Schema für dieses Projekt auf; fügen Sie \"scheme\" zu .aember/build.json hinzu."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild no muestra ningún esquema para este proyecto; añade \"scheme\" a .aember/build.json."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild ne liste aucun schéma pour ce projet ; ajoutez \"scheme\" à .aember/build.json."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild non elenca alcuno schema per questo progetto; aggiungi \"scheme\" a .aember/build.json."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild でこのプロジェクトのスキームが見つかりません。.aember/build.json に \"scheme\" を追加してください。"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xcodebuild не находит схем в этом проекте; добавьте \"scheme\" в .aember/build.json."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

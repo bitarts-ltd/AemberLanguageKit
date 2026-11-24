@@ -1,0 +1,51 @@
+{
+  "identity": "app",
+  "name": "App",
+  "url": "/work/App",
+  "version": "unspecified",
+  "path": "/work/App",
+  "traits": [
+    "default"
+  ],
+  "dependencies": [
+    {
+      "identity": "mid",
+      "name": "Mid",
+      "url": "/work/Mid",
+      "version": "unspecified",
+      "path": "/work/Mid",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+        {
+          "identity": "leaf",
+          "name": "Leaf",
+          "url": "/work/Leaf",
+          "version": "unspecified",
+          "path": "/work/Leaf",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "identity": "leaf",
+      "name": "Leaf",
+      "url": "/work/Leaf",
+      "version": "unspecified",
+      "path": "/work/Leaf",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+
+      ]
+    }
+  ]
+}
+

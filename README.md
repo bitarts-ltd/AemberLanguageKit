@@ -59,8 +59,8 @@ are also the examples of a pack:
 - `<Name>Pack-Bridging-Header.h`: lets the Swift see the grammar
 
 Aember builds them, one target each (see Aember's
-`Aember/LanguagePacks/README.md`). Included so far: PHP, Python,
-Rust, TypeScript and C Family.
+`Aember/LanguagePacks/README.md`). Included: PHP, Python, Rust,
+TypeScript, C Family and Swift.
 
 Each pack is also a target here: its grammar a C target
 (TreeSitter<Name>), its code <Name>Pack, its tests <Name>PackTests

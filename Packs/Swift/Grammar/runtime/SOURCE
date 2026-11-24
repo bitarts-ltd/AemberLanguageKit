@@ -1,0 +1,9 @@
+tree-sitter
+https://github.com/tree-sitter/tree-sitter
+v0.25.10, commit da6fe9beb4f7f67beb75914ca8e0d48ae48d6406 (2025-09-22)
+See LICENSE; src/unicode/LICENSE for the ICU headers
+
+The runtime library's lib/src (without wasm/) and lib/include/tree_sitter/api.h, copied as they are.
+Only src/lib.c is compiled; it includes the other .c files. The Swift pack
+parses Package.swift with it (SwiftPMManifestEditor, SyntaxTree.swift); it is
+compiled into the pack so the pack links nothing of Aember's but the SDK.

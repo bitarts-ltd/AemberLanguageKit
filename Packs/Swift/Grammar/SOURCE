@@ -1,0 +1,12 @@
+tree-sitter-swift
+https://github.com/alex-pinkus/tree-sitter-swift
+commit 91a4e36948b46231caf264b4ece62d8d66622a43 (2026-11-22)
+See LICENSE
+
+src copied as they are by Scripts/vendor-grammar.py.
+Run it again with a newer checkout to update them.
+
+The repository commits no parser.c: src/parser.c and src/tree_sitter
+were generated from its src/grammar.json with tree-sitter 0.26.3
+(`tree-sitter generate src/grammar.json`), as Aember's
+Scripts/build-grammars.sh does.

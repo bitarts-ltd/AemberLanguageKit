@@ -35,8 +35,9 @@ let packagePath = URL(fileURLWithPath: #filePath).deletingLastPathComponent().pa
 /// @param grammarHeaderPaths Folders the grammar's sources include
 /// headers from, relative to Grammar/
 /// @param grammarExcludes Grammar files to leave out
+/// @param grammarDefines Macros the grammar's C is compiled with
 /// @return The targets
-func pack(_ name: String, grammarSources: [String], grammarHeaderPaths: [String], grammarExcludes: [String] = []) -> [Target] {
+func pack(_ name: String, grammarSources: [String], grammarHeaderPaths: [String], grammarExcludes: [String] = [], grammarDefines: [String] = []) -> [Target] {
     let grammar = "TreeSitter\(name)"
     return [
         .target(
@@ -45,7 +46,7 @@ func pack(_ name: String, grammarSources: [String], grammarHeaderPaths: [String]
             exclude: ["LICENSE", "SOURCE"].filter { FileManager.default.fileExists(atPath: "\(packagePath)/Packs/\(name)/Grammar/\($0)") } + grammarExcludes,
             sources: grammarSources,
             publicHeadersPath: "include",
-            cSettings: grammarHeaderPaths.map { .headerSearchPath($0) } + [.unsafeFlags(["-Wno-unused-parameter"])]
+            cSettings: grammarHeaderPaths.map { .headerSearchPath($0) } + grammarDefines.map { .define($0) } + [.unsafeFlags(["-Wno-unused-parameter"])]
         ),
         .target(
             name: "\(name)Pack",
@@ -55,7 +56,7 @@ func pack(_ name: String, grammarSources: [String], grammarHeaderPaths: [String]
         ),
         .testTarget(
             name: "\(name)PackTests",
-            dependencies: [.target(name: "\(name)Pack"), .target(name: "AemberLanguageKit"), .target(name: "PackTestSupport")],
+            dependencies: [.target(name: "\(name)Pack"), .target(name: grammar), .target(name: "AemberLanguageKit"), .target(name: "PackTestSupport")],
             path: "Packs/\(name)/Tests",
             exclude: ["Fixtures"],
             swiftSettings: [.swiftLanguageMode(.v5)]
@@ -102,5 +103,8 @@ let package = Package(
         + pack("Python", grammarSources: ["src/parser.c", "src/scanner.c"], grammarHeaderPaths: ["src"])
         + pack("Rust", grammarSources: ["src/parser.c", "src/scanner.c"], grammarHeaderPaths: ["src"])
         + pack("CFamily", grammarSources: ["c/src/parser.c", "cpp/src/parser.c", "cpp/src/scanner.c"], grammarHeaderPaths: ["cpp/src"], grammarExcludes: ["c/LICENSE", "c/SOURCE", "cpp/LICENSE", "cpp/SOURCE"])
+        // tree-sitter's runtime is compiled in through lib.c, which
+        // includes the others
+        + pack("Swift", grammarSources: ["src/parser.c", "src/scanner.c", "runtime/src/lib.c"], grammarHeaderPaths: ["src", "runtime/src", "runtime/include"], grammarExcludes: ["runtime/LICENSE", "runtime/SOURCE", "runtime/src/unicode/LICENSE"], grammarDefines: ["_POSIX_C_SOURCE=200112L", "_DEFAULT_SOURCE", "_DARWIN_C_SOURCE"])
         + pack("TypeScript", grammarSources: ["typescript/src/parser.c", "typescript/src/scanner.c", "tsx/src/parser.c", "tsx/src/scanner.c", "javascript/src/parser.c", "javascript/src/scanner.c"], grammarHeaderPaths: ["typescript/src"], grammarExcludes: ["common/common.mak", "common/define-grammar.js", "javascript/LICENSE", "javascript/SOURCE"])
 )

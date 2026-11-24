@@ -121,6 +121,80 @@ public protocol PackageBackend: AnyObject {
     /// Whether a requirement written as a bare version (1.2.3) means
     /// exactly it, as npm's does, rather than ^, as Cargo's does
     static var bareVersionIsExact: Bool { get }
+
+    /// How the Add Package sheet asks for a package: a requirement
+    /// string, or a Swift package's sources, rule kinds and products
+    static var addStyle: PackageAddStyle { get }
+
+    /// @brief Where the Add Package sheet may take a package from, for a
+    /// manifest's folder; only .search hides its popup.
+    /// @param folder The manifest's folder
+    /// @return The sources, in the popup's order
+    static func addSources(in folder: URL) -> [PackageAddSource]
+
+    /// @brief Where the Add Package sheet finds packages from one source.
+    /// @param source The source
+    /// @param folder The manifest's folder, for its configuration
+    /// @return The search source, or nil when the package is typed
+    static func searchSource(for source: PackageAddSource, in folder: URL) -> PackageSearchSource?
+
+    /// @brief The name a dependency at a location is known by, to find
+    /// it in the graph once added.
+    /// @param location A URL, path or name
+    /// @return Its identity (the last path component, lowercased, without
+    /// .git, by default)
+    static func identity(ofLocation location: String) -> String
+}
+
+/// @brief How the Add Package sheet asks for a package
+@frozen
+public enum PackageAddStyle: Sendable {
+
+    /// A name and a requirement string (^1.2, ~0.4), and a kind (Cargo,
+    /// npm)
+    case requirement
+
+    /// A source (search, git URL, folder, registry), a rule kind
+    /// (from:, upToNextMinor:, exact:, a range, branch, revision) with
+    /// a version that must be given, and the products to add to the
+    /// root's targets (SwiftPM)
+    case swiftPackage
+}
+
+/// @brief Where a package to add comes from
+@frozen
+public enum PackageAddSource: Int, CaseIterable, Sendable {
+    /// Found by searching
+    case search
+    /// A git repository's URL
+    case url
+    /// A folder on disk
+    case folder
+    /// A package registry, by identity
+    case registry
+}
+
+/// @brief Telling a package's location apart
+public enum PackageLocation {
+
+    /// @brief Whether text is a URL rather than a name or path.
+    /// @param text The text
+    /// @return True for scheme://... and git@...
+    public static func isURL(_ text: String) -> Bool {
+        text.contains("://") || text.hasPrefix("git@")
+    }
+
+    /// @brief The name a package at a location is known by, as SwiftPM
+    /// derives it: the last path component, lowercased, without .git.
+    /// @param location A URL, path or name
+    /// @return The identity
+    public static func identity(of location: String) -> String {
+        var last = location.split(separator: "/").last.map(String.init) ?? location
+        if last.hasSuffix(".git") {
+            last.removeLast(4)
+        }
+        return last.lowercased()
+    }
 }
 
 extension PackageBackend {
@@ -144,6 +218,33 @@ extension PackageBackend {
     /// A bare version is ^ by default
     public static var bareVersionIsExact: Bool {
         false
+    }
+
+    /// A requirement string by default
+    public static var addStyle: PackageAddStyle {
+        .requirement
+    }
+
+    /// @brief Search only, by default.
+    /// @param folder The manifest's folder
+    /// @return [.search]
+    public static func addSources(in folder: URL) -> [PackageAddSource] {
+        [.search]
+    }
+
+    /// @brief By default, searchSource() for a search, else none.
+    /// @param source The source
+    /// @param folder The manifest's folder
+    /// @return The search source
+    public static func searchSource(for source: PackageAddSource, in folder: URL) -> PackageSearchSource? {
+        source == .search ? searchSource() : nil
+    }
+
+    /// @brief The last path component, lowercased, without .git.
+    /// @param location A URL, path or name
+    /// @return The identity
+    public static func identity(ofLocation location: String) -> String {
+        PackageLocation.identity(of: location)
     }
 
     /// The folder the manifest is in
