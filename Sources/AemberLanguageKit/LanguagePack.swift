@@ -167,6 +167,12 @@ public protocol LanguagePack: AnyObject {
     /// The language servers it runs
     var languageServers: [LanguageServerDefinition] { get }
 
+    /// The build systems it detects
+    var buildSystems: [BuildSystemProvider] { get }
+
+    /// The package managers it reads and changes
+    var packageBackends: [PackageBackend.Type] { get }
+
     /// @brief Called when Aember enables the pack, before it asks for
     /// its contributions.
     /// @param context What Aember gives the pack
@@ -186,6 +192,12 @@ extension LanguagePack {
 
     /// No servers
     public var languageServers: [LanguageServerDefinition] { [] }
+
+    /// No build systems
+    public var buildSystems: [BuildSystemProvider] { [] }
+
+    /// No package managers
+    public var packageBackends: [PackageBackend.Type] { [] }
 
     /// @brief Nothing to do.
     /// @param context What Aember gives the pack

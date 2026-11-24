@@ -33,7 +33,11 @@ let package = Package(
         .target(
             name: "AemberLanguageKit",
             swiftSettings: [
-                .unsafeFlags(["-enable-library-evolution"])
+                .unsafeFlags(["-enable-library-evolution"]),
+                // The build and package code came from Aember, which is
+                // in Swift 5 mode; strict concurrency comes once the
+                // API settles
+                .swiftLanguageMode(.v5)
             ]
         ),
         .testTarget(
