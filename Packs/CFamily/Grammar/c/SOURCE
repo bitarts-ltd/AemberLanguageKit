@@ -1,0 +1,7 @@
+tree-sitter-c
+https://github.com/tree-sitter/tree-sitter-c
+commit b780e47fc780ddc8da13afa35a3f4ed5c157823d (2026-04-22)
+See LICENSE
+
+c/src copied as they are by Scripts/vendor-grammar.py.
+Run it again with a newer checkout to update them.

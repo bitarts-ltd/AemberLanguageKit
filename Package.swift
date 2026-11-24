@@ -23,6 +23,10 @@
 */
 
 import PackageDescription
+import Foundation
+
+/// The package's folder, to see which files a pack's grammar has
+let packagePath = URL(fileURLWithPath: #filePath).deletingLastPathComponent().path
 
 /// @brief An included pack's targets: its grammar, its code and its
 /// tests.
@@ -38,7 +42,7 @@ func pack(_ name: String, grammarSources: [String], grammarHeaderPaths: [String]
         .target(
             name: grammar,
             path: "Packs/\(name)/Grammar",
-            exclude: ["LICENSE", "SOURCE"] + grammarExcludes,
+            exclude: ["LICENSE", "SOURCE"].filter { FileManager.default.fileExists(atPath: "\(packagePath)/Packs/\(name)/Grammar/\($0)") } + grammarExcludes,
             sources: grammarSources,
             publicHeadersPath: "include",
             cSettings: grammarHeaderPaths.map { .headerSearchPath($0) } + [.unsafeFlags(["-Wno-unused-parameter"])]
@@ -97,5 +101,6 @@ let package = Package(
         + pack("PHP", grammarSources: ["php_only/src/parser.c", "php_only/src/scanner.c"], grammarHeaderPaths: ["php_only/src"])
         + pack("Python", grammarSources: ["src/parser.c", "src/scanner.c"], grammarHeaderPaths: ["src"])
         + pack("Rust", grammarSources: ["src/parser.c", "src/scanner.c"], grammarHeaderPaths: ["src"])
+        + pack("CFamily", grammarSources: ["c/src/parser.c", "cpp/src/parser.c", "cpp/src/scanner.c"], grammarHeaderPaths: ["cpp/src"], grammarExcludes: ["c/LICENSE", "c/SOURCE", "cpp/LICENSE", "cpp/SOURCE"])
         + pack("TypeScript", grammarSources: ["typescript/src/parser.c", "typescript/src/scanner.c", "tsx/src/parser.c", "tsx/src/scanner.c", "javascript/src/parser.c", "javascript/src/scanner.c"], grammarHeaderPaths: ["typescript/src"], grammarExcludes: ["common/common.mak", "common/define-grammar.js", "javascript/LICENSE", "javascript/SOURCE"])
 )

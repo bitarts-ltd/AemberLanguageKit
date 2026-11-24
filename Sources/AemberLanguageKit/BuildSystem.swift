@@ -197,8 +197,24 @@ public enum CompilationDatabaseOutput: Equatable, Sendable {
 
 /// @brief What Aember hands a build system's commands and compilation
 /// database. Aember's own systems find their tools in it; a pack's
-/// needn't use it.
+/// asks it for the build tools it runs, which tests replace.
 public protocol BuildSystemContext {
+
+    /// @brief A build tool to run in place of the one found on the
+    /// PATH: tests give fake ones.
+    /// @param name The tool's name ("cmake", "make")
+    /// @return Its path, or nil to find it as usual
+    func toolPath(_ name: String) -> String?
+}
+
+extension BuildSystemContext {
+
+    /// @brief By default every tool is found as usual.
+    /// @param name The tool's name
+    /// @return nil
+    public func toolPath(_ name: String) -> String? {
+        nil
+    }
 }
 
 /// @brief One build system, as detected in one project

@@ -24,6 +24,12 @@ GitHub organization. The plan is Aember's
 - `LocalizedText.swift`: text with its translations
 - `ToolLocations.swift`: where tools install themselves (npm's global
   folders, Cargo's)
+- `ExecutableFinder.swift`, `Process+ReadToEnd.swift`,
+  `BuildEnvironmentLoader.swift`: finding and running build tools as
+  Aember does, with the project's environment files
+- `CompileCommand.swift`, `CompilationDatabaseFile.swift`,
+  `CompilationDatabaseError.swift`: what compilation database
+  generators write and throw
 - `BuildSystem.swift`: the `BuildSystem` protocol, providers and
   commands
 - `PackageModel.swift`, `PackageBackend.swift`, `PackageSearch.swift`,
@@ -54,7 +60,7 @@ are also the examples of a pack:
 
 Aember builds them, one target each (see Aember's
 `Aember/LanguagePacks/README.md`). Included so far: PHP, Python,
-Rust and TypeScript.
+Rust, TypeScript and C Family.
 
 Each pack is also a target here: its grammar a C target
 (TreeSitter<Name>), its code <Name>Pack, its tests <Name>PackTests
