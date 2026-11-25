@@ -79,7 +79,9 @@ def main():
         f"enum {args.type} {{",
         "",
     ]
-    lines.append("\n\n".join(f"    /// The queries for {name}\n" + declaration(name, found) for name, found in sets.items()))
+    def doc(name):
+        return "    /// The pack's queries\n" if name == "queries" else f"    /// The queries for {name}\n"
+    lines.append("\n\n".join(doc(name) + declaration(name, found) for name, found in sets.items()))
     lines += ["}", ""]
     os.makedirs(os.path.dirname(os.path.abspath(args.output)), exist_ok=True)
     with open(args.output, "w", encoding="utf-8") as handle:

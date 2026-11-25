@@ -7,7 +7,7 @@ import AemberLanguageKit
 /// @brief The pack's tree-sitter queries
 enum PackQueries {
 
-    /// The queries for queries
+    /// The pack's queries
     static let queries = LanguageQueries(
         highlights: #"""
 [

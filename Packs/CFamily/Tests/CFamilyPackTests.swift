@@ -20,7 +20,8 @@ import PackTestSupport
         let languages = Dictionary(uniqueKeysWithValues: pack.languages.map { ($0.id, $0) })
         let c = try #require(languages["c"])
         let cpp = try #require(languages["cpp"])
-        #expect(c.lspLanguageID(forExtension: "m") == "objective-c")
+        // .m is the Objective-C pack's, from the catalog
+        #expect(!c.extensions.contains("m"))
         #expect(c.lspLanguageID(forExtension: "h") == "c")
         #expect(cpp.lspLanguageID(forExtension: "mm") == "objective-cpp")
         #expect(cpp.extensions.contains("hxx"))

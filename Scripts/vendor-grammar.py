@@ -14,7 +14,8 @@ Usage:
       [--into DIR] [--extra DIR ...] [--queries DIR]
 
   NAME      the pack's folder in Packs/ (Rust), or the path of a pack
-            folder elsewhere (../ZigPack), whose generated headers
+            folder elsewhere (../ZigPack), named for its Info.plist's
+            AemberPackName (else the folder), whose generated headers
             then carry no BitArts copyright
   CHECKOUT  a clone of the grammar's repository
   SYMBOL    the grammar's function (tree_sitter_rust), one per --subdir
@@ -33,6 +34,7 @@ Nothing in the checkout is run; only files are copied.
 
 import argparse
 import os
+import plistlib
 import shutil
 import subprocess
 import sys
@@ -88,7 +90,16 @@ def main():
     if os.sep in args.name:
         # A pack outside this repository, named for its folder
         root = os.path.abspath(args.name)
+        # Named as build-pack.sh names its module: the Info.plist's
+        # AemberPackName as an identifier, else the folder's name
         args.name = os.path.basename(root.rstrip(os.sep))
+        info = os.path.join(root, "Info.plist")
+        if os.path.exists(info):
+            with open(info, "rb") as handle:
+                name = plistlib.load(handle).get("AemberPackName", "")
+            name = "".join(c for c in name if c.isalnum() or c == "_")
+            if name:
+                args.name = name
         if args.name.endswith("Pack") and len(args.name) > 4:
             args.name = args.name[:-4]
         HEADER = HEADER.replace(BITARTS_LINES, "")

@@ -5,12 +5,15 @@
     Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Aember's C, C++ and Objective-C language pack.
     @details
-    - Languages: C (.c, .h, and Objective-C's .m) and C++ (.cpp, .cc,
-      .cxx, .hpp, .hh, .hxx, and Objective-C++'s .mm), with the
-      tree-sitter-c and tree-sitter-cpp grammars compiled in (Grammar/)
-      and Aember's highlights queries for them (Queries/). Objective-C
-      files are highlighted as C and C++, and the language server is
-      told they are objective-c and objective-cpp.
+    - Languages: C (.c, .h) and C++ (.cpp, .cc, .cxx, .hpp, .hh, .hxx,
+      and Objective-C++'s .mm), with the tree-sitter-c and
+      tree-sitter-cpp grammars compiled in (Grammar/) and Aember's
+      highlights queries for them (Queries/). Objective-C++ files are
+      highlighted as C++, and the language server is told they are
+      objective-cpp. Objective-C's .m files are the Objective-C pack's,
+      from BitArts' catalog (its language, objc, is served by this
+      pack's clangd, which knows objective-c); without it Aember
+      highlights them as C.
     - A language server: clangd, one per project for all four
       languages (serverKey "c-family"), reading the compilation
       database Aember keeps in the project's .aember folder, and
@@ -54,9 +57,8 @@ final class CFamilyPack: LanguagePack {
             LanguageDefinition(
                 id: "c",
                 displayName: "C",
-                extensions: ["c", "h", "m"],
+                extensions: ["c", "h"],
                 lspLanguageID: "c",
-                lspLanguageIDsByExtension: ["m": "objective-c"],
                 lineComment: "//",
                 blockComment: (start: "/*", end: "*/"),
                 docComment: "/**",
