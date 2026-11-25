@@ -25,8 +25,9 @@ import AemberLanguageKit
 enum XcodeResultBundleReader {
 
     /// @brief Runs xcresulttool with arguments and returns its stdout,
-    /// or nil when it fails; replaceable in tests
-    typealias Tool = @Sendable ([String]) -> Data?
+    /// or nil when it fails; replaceable in tests. Called on the
+    /// reading thread only, so it needn't be Sendable.
+    typealias Tool = ([String]) -> Data?
 
     /// The format Xcode's commands name their bundles with
     static let format = "xcresult"
