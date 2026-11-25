@@ -1,0 +1,35 @@
+Building for debugging...
+Build complete! (0.70 sec)
+Test Suite 'All tests' started at 2026-10-29 23:38:28.183.
+Test Suite 'TinyTests.xctest' started at 2026-10-29 23:38:28.184.
+Test Suite 'LegacyTests' started at 2026-10-29 23:38:28.184.
+Test Case '-[TinyTests.LegacyTests testFails]' started.
+/Users/dev/Tiny/Tests/TinyTests/TinyTests.swift:21: error: -[TinyTests.LegacyTests testFails] : XCTAssertEqual failed: ("2") is not equal to ("3") - one and one
+Test Case '-[TinyTests.LegacyTests testFails]' failed (0.040 seconds).
+Test Case '-[TinyTests.LegacyTests testPasses]' started.
+Test Case '-[TinyTests.LegacyTests testPasses]' passed (0.000 seconds).
+Test Suite 'LegacyTests' failed at 2026-10-29 23:38:28.224.
+	 Executed 2 tests, with 1 failure (0 unexpected) in 0.040 (0.040) seconds
+Test Suite 'All tests' failed at 2026-10-29 23:38:28.224.
+	 Executed 2 tests, with 1 failure (0 unexpected) in 0.040 (0.042) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 2084
+􀄵  Target Platform: arm64e-apple-macos14.0
+􀟈  Suite Arithmetic started.
+􀟈  Test addsNumbers() started.
+􀟈  Test failsOnPurpose() started.
+􀟈  Test "Subtraction works" started.
+􁁛  Test addsNumbers() passed after 0.001 seconds.
+􀢄  Test "Subtraction works" recorded an issue at TinyTests.swift:15:9: Expectation failed: add(2, -1) == 2
+􀄵  add(2, -1) == 2 → false
+􀄵    add(2, -1) → 1
+􀢄  Test failsOnPurpose() recorded an issue at TinyTests.swift:10:5: Expectation failed: add(1, 2) == 4
+􀄵  add(1, 2) == 4 → false
+􀄵    add(1, 2) → 3
+􀢄  Test "Subtraction works" failed after 0.001 seconds with 1 issue.
+􀢄  Test failsOnPurpose() failed after 0.001 seconds with 1 issue.
+􀢄  Suite Arithmetic failed after 0.001 seconds with 1 issue.
+􀢄  Test run with 3 tests in 1 suite failed after 0.001 seconds with 2 issues.
+Note: Some test targets reported failures:
+  - TinyTests (XCTest)
+  - TinyTests (Swift Testing)

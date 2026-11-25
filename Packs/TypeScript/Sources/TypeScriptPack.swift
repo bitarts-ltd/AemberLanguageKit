@@ -60,7 +60,8 @@ final class TypeScriptPack: LanguagePack {
                 blockComment: (start: "/*", end: "*/"),
                 docComment: "/**",
                 grammar: Grammar(tree_sitter_javascript, abiVersion: 14),
-                queries: PackQueries.javascript
+                queries: PackQueries.javascript,
+                codeGraph: PackCodeGraph.javascript
             ),
             LanguageDefinition(
                 id: "typescript",
@@ -72,7 +73,8 @@ final class TypeScriptPack: LanguagePack {
                 docComment: "/**",
                 grammar: Grammar(tree_sitter_typescript, abiVersion: 15),
                 queries: PackQueries.typescript,
-                inheritsQueriesFrom: "javascript"
+                inheritsQueriesFrom: "javascript",
+                codeGraph: PackCodeGraph.typescript
             ),
             LanguageDefinition(
                 id: "tsx",
@@ -84,7 +86,8 @@ final class TypeScriptPack: LanguagePack {
                 docComment: "/**",
                 grammar: Grammar(tree_sitter_tsx, abiVersion: 14),
                 queries: PackQueries.tsx,
-                inheritsQueriesFrom: "javascript"
+                inheritsQueriesFrom: "javascript",
+                codeGraph: PackCodeGraph.tsx
             ),
         ]
     }
@@ -120,6 +123,10 @@ final class TypeScriptPack: LanguagePack {
 
     var packageBackends: [PackageBackend.Type] {
         [NPMBackend.self, PNPMBackend.self, YarnBackend.self]
+    }
+
+    var buildOutputParsers: [BuildOutputParserProvider] {
+        [BuildOutputParserProvider(identifier: "tsc") { TSCOutputParser() }]
     }
 
     // MARK: - tsc

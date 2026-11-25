@@ -50,7 +50,8 @@ final class RustPack: LanguagePack {
                 blockComment: (start: "/*", end: "*/"),
                 docComment: "///",
                 grammar: Grammar(tree_sitter_rust, abiVersion: 15),
-                queries: PackQueries.queries
+                queries: PackQueries.queries,
+                codeGraph: PackCodeGraph.rust
             ),
         ]
     }
@@ -73,6 +74,10 @@ final class RustPack: LanguagePack {
 
     var packageBackends: [PackageBackend.Type] {
         [CargoBackend.self]
+    }
+
+    var buildOutputParsers: [BuildOutputParserProvider] {
+        [BuildOutputParserProvider(identifier: "cargo") { CargoOutputParser() }]
     }
 }
 

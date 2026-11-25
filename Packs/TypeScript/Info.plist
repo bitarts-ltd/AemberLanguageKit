@@ -2,27 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleIdentifier</key>
-	<string>us.bitarts.Aember.pack.typescript</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>AemberPackID</key>
-	<string>typescript</string>
-	<key>AemberPackName</key>
-	<string>TypeScript</string>
+	<key>AemberPackAPIVersion</key>
+	<string>0.2</string>
+	<key>AemberPackAuthor</key>
+	<string>BitArts</string>
 	<key>AemberPackDescription</key>
 	<string>TypeScript and JavaScript files, their language servers, and npm, pnpm and Yarn</string>
-	<key>AemberPackAPIVersion</key>
-	<string>0.1</string>
+	<key>AemberPackID</key>
+	<string>typescript</string>
 	<key>AemberPackLanguages</key>
 	<array>
 		<string>TypeScript</string>
 		<string>TSX</string>
 		<string>JavaScript</string>
 	</array>
-	<key>AemberPackAuthor</key>
-	<string>BitArts</string>
+	<key>AemberPackName</key>
+	<string>TypeScript</string>
+	<key>CFBundleIdentifier</key>
+	<string>us.bitarts.Aember.pack.typescript</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 </dict>
 </plist>

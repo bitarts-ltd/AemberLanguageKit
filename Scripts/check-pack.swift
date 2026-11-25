@@ -12,7 +12,7 @@
     Info.plist without running it, checks its keys and API version,
     loads it (dlopen, then aember_language_pack), checks the manifest
     against the plist, activates it, and lists its languages, servers,
-    build systems and package managers. Exits 1 on the first problem.
+    build systems, package managers, output parsers and report readers. Exits 1 on the first problem.
 */
 
 import AemberLanguageKit
@@ -172,6 +172,9 @@ for language in pack.languages {
     if let lsp = language.lspLanguageID {
         parts.append("LSP \(lsp)")
     }
+    if let rules = language.codeGraph {
+        parts.append("code graph (\(rules.symbols.count) declarations\(rules.callShapes == nil ? "" : ", call shapes"))")
+    }
     print("  \(language.id) (\(language.displayName.english)): \(parts.joined(separator: ", "))")
 }
 print("Language servers:")
@@ -185,6 +188,14 @@ for provider in pack.buildSystems {
 print("Package managers:")
 for backend in pack.packageBackends {
     print("  \(backend.identifier) (\(backend.displayName))")
+}
+print("Output parsers:")
+for provider in pack.buildOutputParsers {
+    print("  \(provider.identifier)")
+}
+print("Report readers:")
+for reader in pack.buildReportReaders {
+    print("  \(reader.identifier)")
 }
 pack.deactivate()
 print("OK")

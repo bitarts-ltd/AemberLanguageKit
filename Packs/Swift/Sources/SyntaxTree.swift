@@ -13,6 +13,7 @@
 */
 
 import Foundation
+import AemberLanguageKit
 #if canImport(TreeSitterSwift)
 import TreeSitterSwift
 #endif
@@ -128,5 +129,34 @@ struct Node {
     var range: NSRange {
         let start = Int(ts_node_start_byte(node)) / 2
         return NSRange(location: start, length: Int(ts_node_end_byte(node)) / 2 - start)
+    }
+
+    /// @brief The field a child is in.
+    /// @param index The child's index
+    /// @return The field's name ("name"), or nil
+    func fieldName(forChildAt index: Int) -> String? {
+        guard index >= 0, index < childCount else {
+            return nil
+        }
+        return ts_node_field_name_for_child(node, UInt32(index)).map { String(cString: $0) }
+    }
+}
+
+/// @brief One of the pack's own nodes, read as Aember's are (its
+/// tests read calls with SwiftCallShapeReader through it)
+struct PackSyntaxNode: SyntaxNode {
+
+    let node: Node
+
+    var nodeType: String? { node.nodeType }
+    var range: NSRange { node.range }
+    var childCount: Int { node.childCount }
+
+    func child(at index: Int) -> (any SyntaxNode)? {
+        node.child(at: index).map(PackSyntaxNode.init)
+    }
+
+    func fieldName(forChildAt index: Int) -> String? {
+        node.fieldName(forChildAt: index)
     }
 }

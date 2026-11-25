@@ -2,25 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AemberPackAPIVersion</key>
+	<string>0.2</string>
+	<key>AemberPackAuthor</key>
+	<string>BitArts</string>
+	<key>AemberPackDescription</key>
+	<string>Swift files, sourcekit-lsp, Swift packages and Xcode projects</string>
+	<key>AemberPackID</key>
+	<string>swift</string>
+	<key>AemberPackLanguages</key>
+	<array>
+		<string>Swift</string>
+	</array>
+	<key>AemberPackName</key>
+	<string>Swift</string>
 	<key>CFBundleIdentifier</key>
 	<string>us.bitarts.Aember.pack.swift</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>AemberPackID</key>
-	<string>swift</string>
-	<key>AemberPackName</key>
-	<string>Swift</string>
-	<key>AemberPackDescription</key>
-	<string>Swift files, sourcekit-lsp, Swift packages and Xcode projects</string>
-	<key>AemberPackAPIVersion</key>
-	<string>0.1</string>
-	<key>AemberPackLanguages</key>
-	<array>
-		<string>Swift</string>
-	</array>
-	<key>AemberPackAuthor</key>
-	<string>BitArts</string>
 </dict>
 </plist>

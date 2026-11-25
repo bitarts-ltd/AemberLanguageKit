@@ -74,7 +74,7 @@ struct XcodeBuildSystem: DetectableBuildSystem {
             arguments.append("-only-testing:" + filter)
         }
         var command = single("xcodebuild", arguments)
-        command.resultBundle = bundle
+        command.report = BuildReportFile(bundle, format: XcodeResultBundleReader.format)
         return command
     }
 

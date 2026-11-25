@@ -126,6 +126,10 @@ public struct LanguageDefinition: Sendable {
     /// JavaScript's)
     public var inheritsQueriesFrom: String?
 
+    /// How Aember's code graph reads the language's trees; nil reads
+    /// them with Aember's own table of common node names
+    public var codeGraph: CodeGraphRules?
+
     /// @brief A language.
     /// @param id Aember's name for it
     /// @param displayName The name shown to the user
@@ -141,6 +145,7 @@ public struct LanguageDefinition: Sendable {
     /// @param grammar Its tree-sitter grammar
     /// @param queries The grammar's queries
     /// @param inheritsQueriesFrom A language whose queries come first
+    /// @param codeGraph How the code graph reads its trees
     /// @return The language
     public init(
         id: String,
@@ -156,7 +161,8 @@ public struct LanguageDefinition: Sendable {
         docComment: String? = nil,
         grammar: Grammar? = nil,
         queries: LanguageQueries = LanguageQueries(),
-        inheritsQueriesFrom: String? = nil
+        inheritsQueriesFrom: String? = nil,
+        codeGraph: CodeGraphRules? = nil
     ) {
         self.id = id
         self.displayName = displayName
@@ -172,6 +178,7 @@ public struct LanguageDefinition: Sendable {
         self.grammar = grammar
         self.queries = queries
         self.inheritsQueriesFrom = inheritsQueriesFrom
+        self.codeGraph = codeGraph
     }
 
     /// @brief The LSP name for a file of this language.

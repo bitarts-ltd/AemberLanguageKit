@@ -32,7 +32,7 @@ private struct NoContext: BuildSystemContext {}
         let system = PythonBuildSystem()
         let test = try system.command(for: .test, in: output, config: nil, filter: "adds", outputDirectory: output, context: NoContext())
         #expect(test.steps.map { [$0.executable] + $0.arguments } == [["pytest", "--junitxml=/tmp/out/junit.xml", "-k", "adds"]])
-        #expect(test.junitReport?.path == "/tmp/out/junit.xml")
+        #expect(test.report == BuildReportFile(URL(fileURLWithPath: "/tmp/out/junit.xml"), format: BuildReportFile.junit))
         let all = try system.command(for: .test, in: output, config: nil, filter: nil, outputDirectory: output, context: NoContext())
         #expect(all.steps.first?.arguments == ["--junitxml=/tmp/out/junit.xml"])
         #expect(throws: BuildCommandError.self) {

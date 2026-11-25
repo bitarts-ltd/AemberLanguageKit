@@ -68,7 +68,8 @@ struct SwiftBuildSystemTests {
             "test", "-resultBundlePath", "/tmp/out/Result.xcresult",
             "-only-testing:AppTests/Suite"
         ]])
-        #expect(test.resultBundle?.lastPathComponent == "Result.xcresult")
+        #expect(test.report?.url.lastPathComponent == "Result.xcresult")
+        #expect(test.report?.format == "xcresult")
 
         let config = BuildProjectConfig(scheme: "Mine", destination: "platform=macOS", configuration: "Release")
         let build = try command(.build, XcodeBuildSystem(workspace: "W.xcworkspace", project: "App.xcodeproj", scheme: nil), config: config, schemes: ["App"])

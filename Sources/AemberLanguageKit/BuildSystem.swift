@@ -64,6 +64,29 @@ public struct BuildStep: Equatable, Sendable {
     }
 }
 
+/// @brief A report a command writes, and its format.
+public struct BuildReportFile: Equatable, Sendable {
+
+    /// JUnit XML, which Aember reads itself
+    public static let junit = "junit"
+
+    /// Where the command writes it
+    public var url: URL
+
+    /// Its format: `junit`, or the identifier of a pack's
+    /// BuildReportReader ("xcresult")
+    public var format: String
+
+    /// @brief A report.
+    /// @param url Where the command writes it
+    /// @param format Its format
+    /// @return The report
+    public init(_ url: URL, format: String) {
+        self.url = url
+        self.format = format
+    }
+}
+
 /// @brief What runs to build or test a project
 public struct BuildCommand: Equatable, Sendable {
 
@@ -73,23 +96,18 @@ public struct BuildCommand: Equatable, Sendable {
     /// Names the .aember/<identifier>-env file the environment comes from
     public var environmentIdentifier: String
 
-    /// The Xcode result bundle the command writes, read afterwards
-    public var resultBundle: URL?
-
-    /// The JUnit report the command writes, read afterwards
-    public var junitReport: URL?
+    /// The report the command writes, read after it ends
+    public var report: BuildReportFile?
 
     /// @brief A command.
     /// @param steps The processes
     /// @param environmentIdentifier Names the environment file
-    /// @param resultBundle The Xcode result bundle it writes
-    /// @param junitReport The JUnit report it writes
+    /// @param report The report it writes
     /// @return The command
-    public init(steps: [BuildStep], environmentIdentifier: String, resultBundle: URL? = nil, junitReport: URL? = nil) {
+    public init(steps: [BuildStep], environmentIdentifier: String, report: BuildReportFile? = nil) {
         self.steps = steps
         self.environmentIdentifier = environmentIdentifier
-        self.resultBundle = resultBundle
-        self.junitReport = junitReport
+        self.report = report
     }
 
     /// @brief The command as a shell would show it

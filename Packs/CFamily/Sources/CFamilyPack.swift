@@ -61,7 +61,8 @@ final class CFamilyPack: LanguagePack {
                 blockComment: (start: "/*", end: "*/"),
                 docComment: "/**",
                 grammar: Grammar(tree_sitter_c, abiVersion: 15),
-                queries: PackQueries.c
+                queries: PackQueries.c,
+                codeGraph: PackCodeGraph.c
             ),
             LanguageDefinition(
                 id: "cpp",
@@ -73,7 +74,8 @@ final class CFamilyPack: LanguagePack {
                 blockComment: (start: "/*", end: "*/"),
                 docComment: "/**",
                 grammar: Grammar(tree_sitter_cpp, abiVersion: 15),
-                queries: PackQueries.cpp
+                queries: PackQueries.cpp,
+                codeGraph: PackCodeGraph.cpp
             ),
         ]
     }

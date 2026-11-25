@@ -86,7 +86,7 @@ public struct LanguagePackVersion: Comparable, Hashable, Codable, Sendable, Cust
 public enum LanguagePackAPI {
 
     /// This SDK's version
-    public static let version = LanguagePackVersion(0, 1)
+    public static let version = LanguagePackVersion(0, 2)
 
     /// The C symbol a pack exports, returning the retained pack
     public static let entrySymbol = "aember_language_pack"

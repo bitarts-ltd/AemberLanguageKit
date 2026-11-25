@@ -46,7 +46,8 @@ final class PythonPack: LanguagePack {
                 lineComment: "#",
                 docComment: "\"\"\"",
                 grammar: Grammar(tree_sitter_python, abiVersion: 15),
-                queries: PackQueries.queries
+                queries: PackQueries.queries,
+                codeGraph: PackCodeGraph.python
             ),
         ]
     }
@@ -91,7 +92,7 @@ struct PythonBuildSystem: DetectableBuildSystem {
         }
         let report = outputDirectory.appendingPathComponent("junit.xml")
         var command = single("pytest", ["--junitxml=" + report.path] + (filter.map { ["-k", $0] } ?? []))
-        command.junitReport = report
+        command.report = BuildReportFile(report, format: BuildReportFile.junit)
         return command
     }
 }

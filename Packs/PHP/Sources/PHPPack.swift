@@ -52,7 +52,8 @@ final class PHPPack: LanguagePack {
                 blockComment: (start: "/*", end: "*/"),
                 docComment: "/**",
                 grammar: Grammar(tree_sitter_php_only, abiVersion: 15),
-                queries: PackQueries.queries
+                queries: PackQueries.queries,
+                codeGraph: PackCodeGraph.php
             ),
         ]
     }

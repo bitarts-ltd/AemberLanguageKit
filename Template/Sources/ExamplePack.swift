@@ -47,7 +47,12 @@ final class ExamplePack: LanguagePack {
                 // Scripts/embed-queries.py, and give them here:
                 //
                 // grammar: Grammar(tree_sitter_example, abiVersion: 15),
-                // queries: PackQueries.queries
+                // queries: PackQueries.queries,
+                //
+                // and say which of its node types are declarations, for
+                // Aember's code graph (see CodeGraphRules.swift):
+                //
+                // codeGraph: CodeGraphRules(symbols: ["function_definition": .function], imports: ["import_statement"])
             ),
         ]
     }
@@ -76,6 +81,13 @@ final class ExamplePack: LanguagePack {
     /// The package managers it reads and changes; see
     /// PackageBackend.swift and the Rust pack's Cargo backend
     var packageBackends: [PackageBackend.Type] {
+        []
+    }
+
+    /// Parsers for its tools' own console output; Aember already reads
+    /// compiler lines (`path:line:column: error: message`). See
+    /// BuildRecords.swift and the TypeScript pack's TSCOutputParser
+    var buildOutputParsers: [BuildOutputParserProvider] {
         []
     }
 

@@ -59,7 +59,8 @@ final class SwiftPack: LanguagePack {
                 blockComment: (start: "/*", end: "*/"),
                 docComment: "///",
                 grammar: Grammar(tree_sitter_swift, abiVersion: 15),
-                queries: PackQueries.queries
+                queries: PackQueries.queries,
+                codeGraph: PackCodeGraph.swift
             ),
         ]
     }
@@ -89,6 +90,14 @@ final class SwiftPack: LanguagePack {
 
     var packageBackends: [PackageBackend.Type] {
         [SwiftPMBackend.self]
+    }
+
+    var buildOutputParsers: [BuildOutputParserProvider] {
+        [BuildOutputParserProvider(identifier: "swift-tests") { SwiftTestOutputParser() }]
+    }
+
+    var buildReportReaders: [BuildReportReader] {
+        [XcodeResultBundleReader.reader]
     }
 
     // MARK: - sourcekit-lsp

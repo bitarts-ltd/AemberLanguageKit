@@ -6,8 +6,9 @@
     @brief
     The protocol a language pack implements, and what Aember gives it.
     @details
-    A pack contributes languages, language servers, build systems and
-    package managers; everything but its manifest is optional. Aember
+    A pack contributes languages, language servers, build systems,
+    package managers, and parsers for its tools' output and reports;
+    everything but its manifest is optional. Aember
     asks for the contributions when it enables the pack and drops them
     when it disables it, so a pack returns the same contributions every
     time and keeps no state the next enable needs.
@@ -79,6 +80,8 @@ public enum ContributionKind: String, Hashable, Sendable, Codable, CaseIterable 
     case languageServer
     case buildSystem
     case packageBackend
+    case buildOutputParser
+    case buildReportReader
 }
 
 /// @brief One contribution of one pack, stable across versions, so a
@@ -173,6 +176,13 @@ public protocol LanguagePack: AnyObject {
     /// The package managers it reads and changes
     var packageBackends: [PackageBackend.Type] { get }
 
+    /// The parsers for its tools' console output (a compiler's or a
+    /// test runner's own formats)
+    var buildOutputParsers: [BuildOutputParserProvider] { get }
+
+    /// The readers for reports its build systems' commands write
+    var buildReportReaders: [BuildReportReader] { get }
+
     /// @brief Called when Aember enables the pack, before it asks for
     /// its contributions.
     /// @param context What Aember gives the pack
@@ -198,6 +208,12 @@ extension LanguagePack {
 
     /// No package managers
     public var packageBackends: [PackageBackend.Type] { [] }
+
+    /// No output parsers
+    public var buildOutputParsers: [BuildOutputParserProvider] { [] }
+
+    /// No report readers
+    public var buildReportReaders: [BuildReportReader] { [] }
 
     /// @brief Nothing to do.
     /// @param context What Aember gives the pack

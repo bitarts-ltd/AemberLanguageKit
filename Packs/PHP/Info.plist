@@ -2,25 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AemberPackAPIVersion</key>
+	<string>0.2</string>
+	<key>AemberPackAuthor</key>
+	<string>BitArts</string>
+	<key>AemberPackDescription</key>
+	<string>PHP files, intelephense and Composer projects</string>
+	<key>AemberPackID</key>
+	<string>php</string>
+	<key>AemberPackLanguages</key>
+	<array>
+		<string>PHP</string>
+	</array>
+	<key>AemberPackName</key>
+	<string>PHP</string>
 	<key>CFBundleIdentifier</key>
 	<string>us.bitarts.Aember.pack.php</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>AemberPackID</key>
-	<string>php</string>
-	<key>AemberPackName</key>
-	<string>PHP</string>
-	<key>AemberPackDescription</key>
-	<string>PHP files, intelephense and Composer projects</string>
-	<key>AemberPackAPIVersion</key>
-	<string>0.1</string>
-	<key>AemberPackLanguages</key>
-	<array>
-		<string>PHP</string>
-	</array>
-	<key>AemberPackAuthor</key>
-	<string>BitArts</string>
 </dict>
 </plist>

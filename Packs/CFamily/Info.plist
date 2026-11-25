@@ -2,20 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleIdentifier</key>
-	<string>us.bitarts.Aember.pack.c-family</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>AemberPackID</key>
-	<string>c-family</string>
-	<key>AemberPackName</key>
-	<string>C Family</string>
+	<key>AemberPackAPIVersion</key>
+	<string>0.2</string>
+	<key>AemberPackAuthor</key>
+	<string>BitArts</string>
 	<key>AemberPackDescription</key>
 	<string>C, C++ and Objective-C files, clangd, and CMake, Ninja and Make builds</string>
-	<key>AemberPackAPIVersion</key>
-	<string>0.1</string>
+	<key>AemberPackID</key>
+	<string>c-family</string>
 	<key>AemberPackLanguages</key>
 	<array>
 		<string>C</string>
@@ -23,7 +17,13 @@
 		<string>Objective-C</string>
 		<string>Objective-C++</string>
 	</array>
-	<key>AemberPackAuthor</key>
-	<string>BitArts</string>
+	<key>AemberPackName</key>
+	<string>C Family</string>
+	<key>CFBundleIdentifier</key>
+	<string>us.bitarts.Aember.pack.c-family</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 </dict>
 </plist>

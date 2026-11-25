@@ -20,7 +20,9 @@ pack is built for one minor version (see [Versions](#versions)).
 - [The pack](#the-pack)
 - [Languages](#languages)
 - [Language servers](#language-servers)
+- [Code graph](#code-graph)
 - [Build systems](#build-systems)
+- [Build output and reports](#build-output-and-reports)
 - [Package managers](#package-managers)
 - [Text](#text)
 - [How Aember uses packs](#how-aember-uses-packs)
@@ -83,7 +85,7 @@ A pack is a Mach-O dynamic library named `<id>.aemberpack`, where
   | `AemberPackID` | required | The identifier: lowercase, no spaces, stable across versions (`zig`, `c-family`). The file is named for it. |
   | `AemberPackName` | required | The name shown in Settings. |
   | `CFBundleShortVersionString` | required | The pack's version, `major.minor.patch`. |
-  | `AemberPackAPIVersion` | required | The SDK version it was built for (`0.1`). |
+  | `AemberPackAPIVersion` | required | The SDK version it was built for (`0.2`). |
   | `CFBundleIdentifier` | required | Its code signing identifier (`com.example.aember.pack.zig`). Aember checks that the signature's identifier matches. |
   | `AemberPackDescription` | | One line about it. |
   | `AemberPackLanguages` | | The names of its languages, for Settings. |
@@ -148,6 +150,8 @@ final class ZigPack: LanguagePack {
     var languageServers: [LanguageServerDefinition] { [...] }
     var buildSystems: [BuildSystemProvider] { [...] }
     var packageBackends: [PackageBackend.Type] { [...] }
+    var buildOutputParsers: [BuildOutputParserProvider] { [...] }
+    var buildReportReaders: [BuildReportReader] { [...] }
 }
 ```
 
@@ -191,6 +195,7 @@ A `LanguageDefinition` (`LanguageDefinition.swift`) is one language:
 | `lspLanguageID`, `lspLanguageIDsByExtension` | The language servers' name for it, and for particular extensions where it differs (`mm` is `objective-cpp`). |
 | `lineComment`, `blockComment`, `docComment` | For Toggle Comment and the like. |
 | `grammar`, `queries`, `inheritsQueriesFrom` | Its tree-sitter grammar and queries. |
+| `codeGraph` | How Aember's code graph reads its trees (see [Code graph](#code-graph)). |
 
 A file's language is found by file name, then prefix, extension and
 shebang. A language with no grammar or highlights query is
@@ -263,6 +268,40 @@ the server starts, `initializationOptions` are sent with `initialize`,
 and `restartTriggers` restart it when the project's compilation
 database or build server changes.
 
+## Code graph
+
+Aember keeps an index of each project's declarations, imports and
+name uses, from tree-sitter trees: its symbol search, outline and the
+codegraph tools agents use read it. The walk is Aember's; a
+language's `CodeGraphRules` (`CodeGraphRules.swift`) say how to read
+its grammar's trees:
+
+| | |
+|---|---|
+| `symbols` | Declaration node types and the kind each declares (`"function_item": .function`). A declaration is named by its first identifier. |
+| `kindKeywords` | Declarations whose kind a keyword child decides (tree-sitter-swift's `class_declaration` is a class, struct, enum, actor or extension). |
+| `nameFields`, `nameChildTypes` | Declarations named by a field (a Rust `impl_item` by its `type`) or by a child's type (Swift's `init_declaration` by its `init`). |
+| `namesAreUses` | Declarations whose name is a use of another symbol, still counted as a use. |
+| `imports` | Import node types; their text is read as an import. |
+| `anonymousFunctions` | Closures and the like: named only by a `name` field, and their variables are locals. |
+| `firstDeclarators` | Declarators that are their declaration's own variable when first in it (`const x = 1` is one symbol). |
+| `fileScopedModifiers` | Modifiers that keep a declaration to its file, so only uses there keep it alive. |
+| `callShapes` | A `CallShapeReader`, for languages whose argument labels choose the function called. |
+
+Functions declared directly in a type are methods, and variables
+inside functions are locals, in every language. A language without
+rules is read with Aember's own table of common node names, with
+none of a language's special cases.
+
+A `CallShapeReader` reads a call node (through `SyntaxNode`, Aember's
+node as a pack sees it) into the name called and its shape, and says
+whether a call of a shape could call a declaration with a given
+signature; the code graph's dead-code search then counts a function
+as used only by calls it accepts. The Swift pack's
+`SwiftCallShapeReader` reads Swift's argument labels and trailing
+closures, so `file(at:)` doesn't keep `file(named:)` alive. Each
+included pack's `PackCodeGraph.swift` gives its rules.
+
 ## Build systems
 
 A build system (`BuildSystem.swift`) is a type adopting
@@ -280,6 +319,43 @@ give fake tools, and is nil in Aember. The project's
 (`BuildEnvironmentLoader`). The PHP pack's `ComposerBuildSystem` is
 the smallest; the C Family pack's CMake, Ninja and Make write
 compilation databases.
+
+A command can name the report it writes and its format
+(`BuildCommand.report`, a `BuildReportFile`): `junit` for JUnit XML,
+which Aember reads, or the identifier of a pack's
+`BuildReportReader`.
+
+## Build output and reports
+
+Aember reads a run's console output into diagnostics and test
+results (`BuildRecords.swift`), and shows them in its build results.
+It reads the formats many tools share itself: compiler lines
+(`path:line:column: error|warning|note: message`), ld's undefined
+symbols, and lines like `error: message` without a place. A pack
+reads its tools' own formats with a `BuildOutputParser`:
+
+- Aember makes a fresh parser from each enabled pack's
+  `BuildOutputParserProvider` for every run, and hands each line,
+  without colours or carriage returns, to a parser reading a block
+  (`isReadingBlock`, such as a test's failure details) first, then to
+  every pack's parsers in pack order, then to its own. The first that
+  takes the line (returns true) ends its turn, so a parser takes only
+  lines it is sure are its tool's, and can take a tool's summaries to
+  drop them.
+- A parser records diagnostics (`add`, `addNoteToLast`,
+  `placeLast`) and test results (`record`, `appendToMessage`) in the
+  run's `BuildRecords`; test names should be the ones the build
+  system's test filter takes. `LinePattern` matches a regular
+  expression against a line.
+
+After a run, its command's report is read: diagnostics from a report
+replace the console's only when the console gave none, and tests from
+a report replace the console's. A `BuildReportReader` reads one
+format, by identifier.
+
+The Rust pack reads Cargo's JSON messages, rustc's places and cargo
+test; the TypeScript pack, tsc; the Swift pack, XCTest and Swift
+Testing, and Xcode's result bundles (`xcresult`).
 
 ## Package managers
 
@@ -325,7 +401,7 @@ BitArts' packs only. Share yours as the `.aemberpack` file.
 
 | | |
 |---|---|
-| `Sources/AemberLanguageKit/` | The SDK. `LanguagePackAPI.swift`: versions, the entry point and Info.plist keys. `LanguagePack.swift`: the pack, its context and scopes. `LanguageDefinition.swift`, `LanguageServerDefinition.swift`. `BuildSystem.swift` and the compilation database types. `PackageModel.swift`, `PackageBackend.swift`, `PackageSearch.swift`, `PackageCheck.swift`. `LocalizedText.swift`, `ToolLocations.swift` (where npm and Cargo install tools), `ExecutableFinder.swift`, `BuildEnvironmentLoader.swift`. |
+| `Sources/AemberLanguageKit/` | The SDK. `LanguagePackAPI.swift`: versions, the entry point and Info.plist keys. `LanguagePack.swift`: the pack, its context and scopes. `LanguageDefinition.swift`, `LanguageServerDefinition.swift`, `CodeGraphRules.swift`. `BuildSystem.swift` and the compilation database types; `BuildRecords.swift`, output parsers and report readers. `PackageModel.swift`, `PackageBackend.swift`, `PackageSearch.swift`, `PackageCheck.swift`. `LocalizedText.swift`, `ToolLocations.swift` (where npm and Cargo install tools), `ExecutableFinder.swift`, `BuildEnvironmentLoader.swift`. |
 | `Packs/<Name>/` | The packs Aember includes: PHP, Python, Rust, TypeScript, C Family and Swift. |
 | `Template/` | A pack to start from, with its own `Package.swift` for its tests. |
 | `Scripts/` | `build-xcframework.sh`, `build-pack.sh`, `check-pack.sh`, `vendor-grammar.py`, `embed-queries.py`, `pack-strings.py`. |

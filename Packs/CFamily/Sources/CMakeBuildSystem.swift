@@ -78,7 +78,7 @@ struct CMakeBuildSystem: DetectableBuildSystem {
     static func ctestCommand(directory: String, filter: String?, identifier: String, outputDirectory: URL) -> BuildCommand {
         let report = outputDirectory.appendingPathComponent("junit.xml")
         var command = BuildCommand(steps: [BuildStep(executable: "ctest", arguments: ["--test-dir", directory, "--output-on-failure", "--output-junit", report.path] + (filter.map { ["-R", $0] } ?? []))], environmentIdentifier: identifier)
-        command.junitReport = report
+        command.report = BuildReportFile(report, format: BuildReportFile.junit)
         return command
     }
 }
