@@ -2,7 +2,7 @@
     @file SwiftPMChecks.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Check for Updates for Swift packages
     @details
     SwiftPM lists each pinned package's versions, its git tags (`git

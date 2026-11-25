@@ -1,7 +1,7 @@
 /**
     @file Process+ReadToEnd.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Collects a child process's output without deadlocking.
     @details
     A child that writes more than a pipe's buffer (64 KB) blocks until

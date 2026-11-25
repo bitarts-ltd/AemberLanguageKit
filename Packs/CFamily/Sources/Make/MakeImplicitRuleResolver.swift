@@ -2,7 +2,7 @@
     @file MakeImplicitRuleResolver.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Applies Make pattern rules to targets listed without commands.
     @details
     `make -p -n` only searches implicit rules for targets the default goal

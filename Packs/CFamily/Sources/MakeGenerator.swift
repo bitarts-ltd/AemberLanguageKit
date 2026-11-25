@@ -1,7 +1,7 @@
 /**
     @file MakeGenerator.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Generates compilation database using Make's database dump.
     @details
     Uses `make -p` to dump Make's internal rule database, then parses

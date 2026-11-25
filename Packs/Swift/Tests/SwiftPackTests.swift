@@ -2,7 +2,7 @@
     @file SwiftPackTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for what the Swift pack gives Aember.
     @details
     The Swift language with its grammar; sourcekit-lsp's arguments for

@@ -1,7 +1,7 @@
 /**
     @file NinjaGenerator.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Generates compilation database using Ninja's native support.
     @details
     Ninja build system has built-in support for compilation database

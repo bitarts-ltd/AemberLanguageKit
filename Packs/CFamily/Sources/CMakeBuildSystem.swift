@@ -1,7 +1,7 @@
 /**
     @file CMakeBuildSystem.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief CMake and Ninja as build systems.
     @details
     CMake: a CMakeLists.txt in the root, with build/,

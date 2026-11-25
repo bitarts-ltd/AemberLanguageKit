@@ -2,7 +2,7 @@
     @file LockfileText.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Reading pnpm's and Yarn's lockfiles
     @details
     pnpm-lock.yaml and Yarn 2+'s yarn.lock are YAML, and Yarn 1's

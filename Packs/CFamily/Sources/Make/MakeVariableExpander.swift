@@ -1,7 +1,7 @@
 /**
     @file MakeVariableExpander.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Expands Make variable references in commands.
     @details
     Expands $(VAR) and ${VAR} references using a variable dictionary,

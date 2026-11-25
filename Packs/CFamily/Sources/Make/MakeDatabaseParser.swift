@@ -1,7 +1,7 @@
 /**
     @file MakeDatabaseParser.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Parses Make's internal database dump from `make -p`.
     @details
     Executes `make -p -n` to get Make's internal rule database, then parses

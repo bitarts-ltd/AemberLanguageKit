@@ -2,7 +2,7 @@
     @file PHPPack.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Aember's PHP language pack.
     @details
     The smallest of the included packs, and an example of each part a

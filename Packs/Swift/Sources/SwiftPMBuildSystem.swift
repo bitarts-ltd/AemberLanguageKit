@@ -1,7 +1,7 @@
 /**
     @file SwiftPMBuildSystem.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Swift Package Manager as a build system.
     @details
     A project with a Package.swift in its root. It builds with `swift

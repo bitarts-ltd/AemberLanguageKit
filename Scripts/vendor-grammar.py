@@ -13,7 +13,9 @@ Usage:
   vendor-grammar.py NAME CHECKOUT SYMBOL... [--subdir DIR ...]
       [--into DIR] [--extra DIR ...] [--queries DIR]
 
-  NAME      the pack's folder in Packs/ (Rust)
+  NAME      the pack's folder in Packs/ (Rust), or the path of a pack
+            folder elsewhere (../ZigPack), whose generated headers
+            then carry no BitArts copyright
   CHECKOUT  a clone of the grammar's repository
   SYMBOL    the grammar's function (tree_sitter_rust), one per --subdir
             when there are several
@@ -39,7 +41,7 @@ HEADER = """/**
     @file {header}.h
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief The {name} grammar's entry point, for the pack's Swift code.
 */
 
@@ -54,11 +56,17 @@ const TSLanguage *{symbol}(void);
 #endif
 """
 
+# The lines naming BitArts, left out of a pack outside this repository
+BITARTS_LINES = """    @author Warren Mann
+    @copyright
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
+"""
+
 BRIDGING = """/**
     @file {name}Pack-Bridging-Header.h
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief What the {name} pack's Swift code sees of its C grammars.
 */
 
@@ -76,7 +84,17 @@ def main():
     parser.add_argument("--queries", default="queries")
     args = parser.parse_args()
 
-    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Packs", args.name)
+    global HEADER, BRIDGING
+    if os.sep in args.name:
+        # A pack outside this repository, named for its folder
+        root = os.path.abspath(args.name)
+        args.name = os.path.basename(root.rstrip(os.sep))
+        if args.name.endswith("Pack") and len(args.name) > 4:
+            args.name = args.name[:-4]
+        HEADER = HEADER.replace(BITARTS_LINES, "")
+        BRIDGING = BRIDGING.replace(BITARTS_LINES, "")
+    else:
+        root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Packs", args.name)
     grammar = os.path.join(root, "Grammar")
     subdirs = args.subdir or [""]
     if len(args.symbols) != len(subdirs):

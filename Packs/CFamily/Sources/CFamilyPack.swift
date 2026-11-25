@@ -2,7 +2,7 @@
     @file CFamilyPack.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Aember's C, C++ and Objective-C language pack.
     @details
     - Languages: C (.c, .h, and Objective-C's .m) and C++ (.cpp, .cc,

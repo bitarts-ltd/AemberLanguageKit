@@ -2,7 +2,7 @@
     @file SwiftPMChecksTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for checking Swift packages for updates.
     @details
     Git tags against a fake tool runner: the newest the rule allows and

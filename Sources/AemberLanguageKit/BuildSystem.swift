@@ -2,7 +2,7 @@
     @file BuildSystem.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief A project's build system, as a pack defines it, and the commands it
     gives.
     @details

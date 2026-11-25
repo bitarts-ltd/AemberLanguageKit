@@ -2,7 +2,7 @@
     @file PackageWorkspaces.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Finding a JavaScript workspace's members
     @details
     npm and Yarn list a workspace's members in package.json's

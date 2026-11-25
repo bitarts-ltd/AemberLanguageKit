@@ -2,7 +2,7 @@
     @file SwiftPMManifestEditorTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for taking a dependency out of Package.swift's text.
     @details
     The editor removes a .package(...) by url:, path: or id:, with its

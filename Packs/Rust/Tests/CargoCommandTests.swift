@@ -2,7 +2,7 @@
     @file CargoCommandTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for the commands that change a Cargo crate's dependencies.
     @details
     Add with requirements, paths and git, remove, update by crate, a

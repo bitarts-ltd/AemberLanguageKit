@@ -2,7 +2,7 @@
     @file SwiftPack.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Aember's Swift language pack.
     @details
     - A language: Swift (.swift, swift scripts), with tree-sitter-swift

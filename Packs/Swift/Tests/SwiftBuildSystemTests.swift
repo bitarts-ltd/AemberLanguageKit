@@ -2,7 +2,7 @@
     @file SwiftBuildSystemTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for the Swift package and Xcode build systems.
     @details
     Their commands: swift build and test with a filter; xcodebuild with

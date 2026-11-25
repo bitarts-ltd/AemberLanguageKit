@@ -2,7 +2,7 @@
     @file LanguageDefinition.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief
     A language a pack defines: which files are in it, and how to parse and
     highlight them.
@@ -29,7 +29,8 @@ public struct Grammar: Sendable {
     public let language: @convention(c) () -> OpaquePointer?
 
     /// The tree-sitter ABI version the grammar was generated for, when
-    /// the pack knows it; Aember checks it against its tree-sitter's
+    /// the pack knows it, for reference. Aember's tree-sitter takes
+    /// grammars of ABI 13 to 15 and refuses others when it parses.
     public let abiVersion: Int?
 
     /// @brief A grammar from its language function.

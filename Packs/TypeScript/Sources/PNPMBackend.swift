@@ -2,7 +2,7 @@
     @file PNPMBackend.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief pnpm's dependencies, and which tool a package.json belongs to
     @details
     NodePackageManager decides whether npm, pnpm or Yarn manages a

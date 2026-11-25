@@ -2,7 +2,7 @@
     @file LanguagePackAPITests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief
     Tests for versions, API compatibility, localized text and the entry point.
 */

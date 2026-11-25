@@ -1,7 +1,7 @@
 /**
     @file CMakeGenerator.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Generates compilation database using CMake's native support.
     @details
     CMake natively supports compilation database generation via the

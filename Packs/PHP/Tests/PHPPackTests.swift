@@ -2,7 +2,7 @@
     @file PHPPackTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for the PHP pack's contributions.
     @details
     Aember's tests load the built pack and check it through Aember's

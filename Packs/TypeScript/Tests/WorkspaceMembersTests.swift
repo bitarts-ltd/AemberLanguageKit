@@ -2,7 +2,7 @@
     @file WorkspaceMembersTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for workspace members in JavaScript projects.
     @details
     Finding members from patterns (a star, two stars, literal folders,

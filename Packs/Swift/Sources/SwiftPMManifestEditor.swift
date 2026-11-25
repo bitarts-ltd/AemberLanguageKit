@@ -2,7 +2,7 @@
     @file SwiftPMManifestEditor.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Takes a dependency out of a Package.swift's text
     @details
     SwiftPM has no remove-dependency, so Aember removes a Swift package

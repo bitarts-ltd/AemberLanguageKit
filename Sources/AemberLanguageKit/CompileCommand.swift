@@ -1,7 +1,7 @@
 /**
     @file CompileCommand.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Data model for a single compile command in the compilation database.
     @details
     Represents a single entry in compile_commands.json, containing the

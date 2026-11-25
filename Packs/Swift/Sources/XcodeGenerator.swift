@@ -1,7 +1,7 @@
 /**
     @file XcodeGenerator.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Generates compilation database by parsing xcodebuild logs.
     @details
     Xcode doesn't have native compilation database support, so we parse

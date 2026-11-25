@@ -2,7 +2,7 @@
     @file XcodeProjectLookup.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Finds an Xcode project's workspace, project and scheme.
     @details
     One rule for the build system detector, the compilation database

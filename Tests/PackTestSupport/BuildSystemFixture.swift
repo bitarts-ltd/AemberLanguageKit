@@ -2,7 +2,7 @@
     @file BuildSystemFixture.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Temporary project directories for build system tests.
     @details
     Creates a unique directory under the system temporary directory,

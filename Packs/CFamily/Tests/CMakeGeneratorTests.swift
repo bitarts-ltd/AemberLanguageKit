@@ -2,7 +2,7 @@
     @file CMakeGeneratorTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for CMakeGenerator.
     @details
     Runs the generator against a fake cmake shell script that records

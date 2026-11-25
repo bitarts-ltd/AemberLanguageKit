@@ -2,7 +2,7 @@
     @file CargoChecks.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Check for Updates for Cargo
     @details
     Cargo runs `cargo update --dry-run --verbose`, whose "Updating a

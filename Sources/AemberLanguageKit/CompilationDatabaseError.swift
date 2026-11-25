@@ -1,7 +1,7 @@
 /**
     @file CompilationDatabaseError.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Error types for compilation database generation.
     @details
     The errors shared by the manager and the generators: a project with

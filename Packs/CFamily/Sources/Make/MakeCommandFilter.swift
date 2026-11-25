@@ -1,7 +1,7 @@
 /**
     @file MakeCommandFilter.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Filters and analyzes Make commands to identify compilation.
     @details
     Examines expanded Make commands to determine if they are compilation

@@ -2,7 +2,7 @@
     @file PackageBackend.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Package managers behind one protocol, and running their tools
     @details
     A PackageBackend is one package manager's view of one manifest: it

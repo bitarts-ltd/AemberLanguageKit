@@ -1,7 +1,7 @@
 /**
     @file BuildEnvironmentLoader.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Loads a project's build environment from its .aember folder.
     @details
     Provides the environment for the build system's processes: builds,

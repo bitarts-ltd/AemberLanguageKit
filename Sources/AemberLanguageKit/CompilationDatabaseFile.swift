@@ -1,7 +1,7 @@
 /**
     @file CompilationDatabaseFile.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Where the generators write the compilation database, and how.
     @details
     Every generator ends by writing .aember/compile_commands.json in the

@@ -2,7 +2,7 @@
     @file PythonPack.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Aember's Python language pack.
     @details
     - A language: .py, .pyw and .pyi files and python scripts, with the

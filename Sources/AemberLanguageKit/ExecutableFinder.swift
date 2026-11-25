@@ -1,7 +1,7 @@
 /**
     @file ExecutableFinder.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Utility for finding executables in common locations.
     @details
     macOS GUI applications don't inherit the user's shell PATH, which causes

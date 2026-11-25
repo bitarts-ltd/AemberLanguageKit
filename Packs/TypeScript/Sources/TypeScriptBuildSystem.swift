@@ -1,7 +1,7 @@
 /**
     @file TypeScriptBuildSystem.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief TypeScript projects as a build system.
     @details
     TypeScript/JavaScript projects (tsconfig.json or jsconfig.json),

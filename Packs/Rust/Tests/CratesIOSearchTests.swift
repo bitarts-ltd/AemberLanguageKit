@@ -2,7 +2,7 @@
     @file CratesIOSearchTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for searching crates.io.
     @details
     crates.io's answers, saved from the API, parsed into results and

@@ -2,7 +2,7 @@
     @file NodePackageManagersTests.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Tests for pnpm and Yarn, and which tool a package.json uses.
     @details
     LockfileText on the YAML lockfiles write and on Yarn 1's format;

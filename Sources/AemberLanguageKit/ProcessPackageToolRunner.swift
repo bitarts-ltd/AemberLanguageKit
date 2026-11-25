@@ -2,7 +2,7 @@
     @file ProcessPackageToolRunner.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Running package managers' tools as processes
     @details
     The runner Aember gives backends, and one a pack can make itself

@@ -2,7 +2,7 @@
     @file YarnBackend.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Yarn's dependencies, Yarn 1 and Yarn 2+
     @details
     Reads the direct dependencies from package.json, as npm does, and

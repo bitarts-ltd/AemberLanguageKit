@@ -1,7 +1,7 @@
 /**
     @file MakeBuildSystem.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief GNU Make as a build system.
     @details
     A project with a Makefile, makefile or GNUmakefile in its root. It

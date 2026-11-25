@@ -2,7 +2,7 @@
     @file LanguageServerDefinition.swift
     @author Warren Mann
     @copyright
-    Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief
     A language server a pack runs for its languages.
     @details

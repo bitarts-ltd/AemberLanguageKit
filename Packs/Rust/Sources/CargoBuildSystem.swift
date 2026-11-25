@@ -1,7 +1,7 @@
 /**
     @file CargoBuildSystem.swift
     @author Warren Mann
-    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us) All rights reserved.
+    @copyright Copyright © 2026 BitArts, Ltd (warren@bitarts.us). MIT License: see LICENSE.
     @brief Rust's Cargo as a build system.
     @details
     A project with a Cargo.toml in its root. It builds with `cargo build
