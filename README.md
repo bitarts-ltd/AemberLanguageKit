@@ -169,9 +169,13 @@ builds' and servers' commands: the usual folders, then the login
 shell's `PATH`, since an app opened from the Finder has a bare one.
 
 Each contribution has a `ContributionID` (pack, kind, its own id)
-that stays the same across versions. Lookups take a
-`LanguagePackScope`; today it is always `.global`, and a project may
-later turn a pack or a contribution off for itself.
+that stays the same across versions, so a setting can name one.
+Packs are enabled app-wide today: Aember uses the same packs and
+contributions in every project. A later Aember may let a project
+turn a pack, or one contribution, off for itself; that needs no
+change to a pack. `LanguagePackScope` has a `.project(URL)` case for
+it, and settings asked for in that scope are already kept for that
+project.
 
 ## Languages
 

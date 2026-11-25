@@ -14,11 +14,11 @@
 
     Every contribution has an identifier that is stable across versions
     (a ContributionID: the pack, the kind, the contribution's own id),
-    and Aember looks contributions up for a scope. Today the scope is
-    always .global, the packs enabled app-wide; a project may later
-    turn a pack, or one contribution, off for itself, and its settings
-    are kept per scope (LanguagePackContext.settings(for:)) for the
-    same reason.
+    so a setting can name one. Packs are enabled app-wide today, and
+    Aember uses the same contributions in every project. A project may
+    later turn a pack, or one contribution, off for itself without
+    any change to packs; settings are already kept per scope
+    (LanguagePackContext.settings(for:)), .project included.
 */
 
 import Foundation
